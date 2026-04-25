@@ -4,7 +4,7 @@ uvicorn>=0.30.0
 pydantic>=2.0.0
 
 # Core training — unsloth manages its own trl/transformers/peft versions
-unsloth[colab-new]>=2024.11.4
+unsloth[cu118-torch210]>=2024.11.4
 accelerate>=0.34.0
 bitsandbytes>=0.43.3
 
