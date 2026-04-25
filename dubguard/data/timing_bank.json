@@ -1,0 +1,1202 @@
+[
+  {
+    "lang": "hi",
+    "original_en": "Wait here. please.",
+    "dubbed_hi": "Aap yahan par thodi der ke liye intezaar",
+    "short_fix_hi": "Yahan ruko.",
+    "original_duration": 1.0,
+    "severity": "WARN"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Wait here. please.",
+    "dubbed_pt": "Por favor, espere aqui um momento",
+    "short_fix_pt": "Espere aqui.",
+    "original_duration": 1.0,
+    "severity": "WARN"
+  },
+  {
+    "lang": "es",
+    "original_en": "Wait here. please.",
+    "dubbed_es": "Por favor esperame acá un ratito",
+    "short_fix_es": "Esperá acá.",
+    "original_duration": 1.0,
+    "severity": "WARN"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Don't jump.",
+    "dubbed_hi": "Aapko bilkul bhi koodna nahi chahiye kyunki yeh bahut khatarnak hai.",
+    "short_fix_hi": "Mat koodo.",
+    "original_duration": 1.1,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Don't jump.",
+    "dubbed_pt": "Você definitivamente não deve pular agora de jeito nenhum.",
+    "short_fix_pt": "Não pule.",
+    "original_duration": 1.1,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Don't jump.",
+    "dubbed_es": "No tenés que saltar de ninguna manera porque es peligroso.",
+    "short_fix_es": "No saltes.",
+    "original_duration": 1.1,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Turn left.",
+    "dubbed_hi": "Aage aakar aapko theek apni baayi taraf mudna padega bina ruke.",
+    "short_fix_hi": "Baayein mudo.",
+    "original_duration": 1.0,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Turn left.",
+    "dubbed_pt": "Você vai ter que virar à esquerda assim que chegar ali na frente.",
+    "short_fix_pt": "Vire à esquerda.",
+    "original_duration": 1.0,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Turn left.",
+    "dubbed_es": "Vas a tener que doblar a la izquierda cuando lleguemos al cruce.",
+    "short_fix_es": "Doblá a la izquierda.",
+    "original_duration": 1.0,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Look out! please.",
+    "dubbed_hi": "Aapko aage bahut dhyan se dekhna",
+    "short_fix_hi": "Dhyan se!",
+    "original_duration": 0.8,
+    "severity": "WARN"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Look out! please.",
+    "dubbed_pt": "Você precisa tomar muito cuidado com o",
+    "short_fix_pt": "Cuidado!",
+    "original_duration": 0.8,
+    "severity": "WARN"
+  },
+  {
+    "lang": "es",
+    "original_en": "Look out! please.",
+    "dubbed_es": "Tenés que tener mucho cuidado y",
+    "short_fix_es": "¡Cuidado!",
+    "original_duration": 0.8,
+    "severity": "WARN"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Stop talking.",
+    "dubbed_hi": "Mujhe aap logon ki baatein bilkul nahi sunni hain isliye chup ho jayiye.",
+    "short_fix_hi": "Baat mat karo.",
+    "original_duration": 1.1,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Stop talking.",
+    "dubbed_pt": "Eu não quero ouvir vocês falando mais nenhuma palavra agora.",
+    "short_fix_pt": "Parem de falar.",
+    "original_duration": 1.1,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Stop talking.",
+    "dubbed_es": "No quiero escuchar que sigan hablando así que hagan silencio.",
+    "short_fix_es": "Dejen de hablar.",
+    "original_duration": 1.1,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Run away.",
+    "dubbed_hi": "Aap logon ko yahan se turant bhag jana chahiye bina kisi deri ke.",
+    "short_fix_hi": "Bhaag jao.",
+    "original_duration": 1.2,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Run away.",
+    "dubbed_pt": "Vocês têm que sair correndo deste lugar agora mesmo, sem demora.",
+    "short_fix_pt": "Fujam.",
+    "original_duration": 1.2,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Run away.",
+    "dubbed_es": "Ustedes tienen que salir corriendo de este lugar ahora mismo.",
+    "short_fix_es": "Huyan.",
+    "original_duration": 1.2,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Hold the door. please.",
+    "dubbed_hi": "Kripya karke is darwaze ko thodi der khula",
+    "short_fix_hi": "Darwaza pakdo.",
+    "original_duration": 1.2,
+    "severity": "WARN"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Hold the door. please.",
+    "dubbed_pt": "Por favor, segure esta porta aberta por",
+    "short_fix_pt": "Segure a porta.",
+    "original_duration": 1.2,
+    "severity": "WARN"
+  },
+  {
+    "lang": "es",
+    "original_en": "Hold the door. please.",
+    "dubbed_es": "Por favor aguantá la puerta un segundo",
+    "short_fix_es": "Sostené la puerta.",
+    "original_duration": 1.2,
+    "severity": "WARN"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Close your eyes.",
+    "dubbed_hi": "Aap apni dono aankhein achchi tarah se band kar lijiye kholna mat.",
+    "short_fix_hi": "Aankhein band karo.",
+    "original_duration": 1.3,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Close your eyes.",
+    "dubbed_pt": "Você tem que fechar os seus olhos com muita força e não abri-los.",
+    "short_fix_pt": "Feche os olhos.",
+    "original_duration": 1.3,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Close your eyes.",
+    "dubbed_es": "Tenés que cerrar los dos ojos fuertemente y no abrirlos.",
+    "short_fix_es": "Cerrá los ojos.",
+    "original_duration": 1.3,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Help him.",
+    "dubbed_hi": "Kripya jaldi se us bechare insaan ki thodi bahut madad kar dijiye.",
+    "short_fix_hi": "Madad karo.",
+    "original_duration": 0.9,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Help him.",
+    "dubbed_pt": "Por favor, vá rapidinho e dê uma mão para aquele homem ali ajudar.",
+    "short_fix_pt": "Ajude-o.",
+    "original_duration": 0.9,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Help him.",
+    "dubbed_es": "Por favor andá rapidito y dale una mano a ese hombre.",
+    "short_fix_es": "Ayudalo.",
+    "original_duration": 0.9,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Follow me. please.",
+    "dubbed_hi": "Aap mere theek peechay peechay",
+    "short_fix_hi": "Peechay aao.",
+    "original_duration": 1.0,
+    "severity": "WARN"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Follow me. please.",
+    "dubbed_pt": "Você tem que me seguir bem de",
+    "short_fix_pt": "Siga-me.",
+    "original_duration": 1.0,
+    "severity": "WARN"
+  },
+  {
+    "lang": "es",
+    "original_en": "Follow me. please.",
+    "dubbed_es": "Vos tenés que seguirme justo atrás",
+    "short_fix_es": "Seguime.",
+    "original_duration": 1.0,
+    "severity": "WARN"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Wait here.",
+    "dubbed_hi": "Aap yahan par thodi der ke liye intezaar kijiye jab tak main na aa jaun.",
+    "short_fix_hi": "Yahan ruko.",
+    "original_duration": 1.0,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Wait here.",
+    "dubbed_pt": "Por favor, espere aqui um momento até eu voltar para buscá-lo.",
+    "short_fix_pt": "Espere aqui.",
+    "original_duration": 1.0,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Wait here.",
+    "dubbed_es": "Por favor esperame acá un ratito hasta que yo vuelva.",
+    "short_fix_es": "Esperá acá.",
+    "original_duration": 1.0,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Don't jump.",
+    "dubbed_hi": "Aapko bilkul bhi koodna nahi chahiye kyunki yeh bahut khatarnak hai.",
+    "short_fix_hi": "Mat koodo.",
+    "original_duration": 1.1,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Don't jump.",
+    "dubbed_pt": "Você definitivamente não deve pular agora de jeito nenhum.",
+    "short_fix_pt": "Não pule.",
+    "original_duration": 1.1,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Don't jump.",
+    "dubbed_es": "No tenés que saltar de ninguna manera porque es peligroso.",
+    "short_fix_es": "No saltes.",
+    "original_duration": 1.1,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Turn left. please.",
+    "dubbed_hi": "Aage aakar aapko theek apni baayi",
+    "short_fix_hi": "Baayein mudo.",
+    "original_duration": 1.0,
+    "severity": "WARN"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Turn left. please.",
+    "dubbed_pt": "Você vai ter que virar à esquerda",
+    "short_fix_pt": "Vire à esquerda.",
+    "original_duration": 1.0,
+    "severity": "WARN"
+  },
+  {
+    "lang": "es",
+    "original_en": "Turn left. please.",
+    "dubbed_es": "Vas a tener que doblar a la",
+    "short_fix_es": "Doblá a la izquierda.",
+    "original_duration": 1.0,
+    "severity": "WARN"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Look out!",
+    "dubbed_hi": "Aapko aage bahut dhyan se dekhna chahiye wahan kuch khatra hai!",
+    "short_fix_hi": "Dhyan se!",
+    "original_duration": 0.8,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Look out!",
+    "dubbed_pt": "Você precisa tomar muito cuidado com o que está aí na frente!",
+    "short_fix_pt": "Cuidado!",
+    "original_duration": 0.8,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Look out!",
+    "dubbed_es": "Tenés que tener mucho cuidado y fijarte bien adelante tuyo!",
+    "short_fix_es": "¡Cuidado!",
+    "original_duration": 0.8,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Stop talking.",
+    "dubbed_hi": "Mujhe aap logon ki baatein bilkul nahi sunni hain isliye chup ho jayiye.",
+    "short_fix_hi": "Baat mat karo.",
+    "original_duration": 1.1,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Stop talking.",
+    "dubbed_pt": "Eu não quero ouvir vocês falando mais nenhuma palavra agora.",
+    "short_fix_pt": "Parem de falar.",
+    "original_duration": 1.1,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Stop talking.",
+    "dubbed_es": "No quiero escuchar que sigan hablando así que hagan silencio.",
+    "short_fix_es": "Dejen de hablar.",
+    "original_duration": 1.1,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Run away. please.",
+    "dubbed_hi": "Aap logon ko yahan se turant bhag",
+    "short_fix_hi": "Bhaag jao.",
+    "original_duration": 1.2,
+    "severity": "WARN"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Run away. please.",
+    "dubbed_pt": "Vocês têm que sair correndo deste",
+    "short_fix_pt": "Fujam.",
+    "original_duration": 1.2,
+    "severity": "WARN"
+  },
+  {
+    "lang": "es",
+    "original_en": "Run away. please.",
+    "dubbed_es": "Ustedes tienen que salir corriendo de",
+    "short_fix_es": "Huyan.",
+    "original_duration": 1.2,
+    "severity": "WARN"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Hold the door.",
+    "dubbed_hi": "Kripya karke is darwaze ko thodi der khula rakhiye aur band mat hone dijiye.",
+    "short_fix_hi": "Darwaza pakdo.",
+    "original_duration": 1.2,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Hold the door.",
+    "dubbed_pt": "Por favor, segure esta porta aberta por um segundo longo para mim.",
+    "short_fix_pt": "Segure a porta.",
+    "original_duration": 1.2,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Hold the door.",
+    "dubbed_es": "Por favor aguantá la puerta un segundo y no dejes que se cierre.",
+    "short_fix_es": "Sostené la puerta.",
+    "original_duration": 1.2,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Close your eyes.",
+    "dubbed_hi": "Aap apni dono aankhein achchi tarah se band kar lijiye kholna mat.",
+    "short_fix_hi": "Aankhein band karo.",
+    "original_duration": 1.3,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Close your eyes.",
+    "dubbed_pt": "Você tem que fechar os seus olhos com muita força e não abri-los.",
+    "short_fix_pt": "Feche os olhos.",
+    "original_duration": 1.3,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Close your eyes.",
+    "dubbed_es": "Tenés que cerrar los dos ojos fuertemente y no abrirlos.",
+    "short_fix_es": "Cerrá los ojos.",
+    "original_duration": 1.3,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Help him. please.",
+    "dubbed_hi": "Kripya jaldi se us bechare insaan ki",
+    "short_fix_hi": "Madad karo.",
+    "original_duration": 0.9,
+    "severity": "WARN"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Help him. please.",
+    "dubbed_pt": "Por favor, vá rapidinho e dê uma",
+    "short_fix_pt": "Ajude-o.",
+    "original_duration": 0.9,
+    "severity": "WARN"
+  },
+  {
+    "lang": "es",
+    "original_en": "Help him. please.",
+    "dubbed_es": "Por favor andá rapidito y dale",
+    "short_fix_es": "Ayudalo.",
+    "original_duration": 0.9,
+    "severity": "WARN"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Follow me.",
+    "dubbed_hi": "Aap mere theek peechay peechay chaliye is raste par.",
+    "short_fix_hi": "Peechay aao.",
+    "original_duration": 1.0,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Follow me.",
+    "dubbed_pt": "Você tem que me seguir bem de perto por este exato caminho aqui.",
+    "short_fix_pt": "Siga-me.",
+    "original_duration": 1.0,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Follow me.",
+    "dubbed_es": "Vos tenés que seguirme justo atrás mío por este camino.",
+    "short_fix_es": "Seguime.",
+    "original_duration": 1.0,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Wait here.",
+    "dubbed_hi": "Aap yahan par thodi der ke liye intezaar kijiye jab tak main na aa jaun.",
+    "short_fix_hi": "Yahan ruko.",
+    "original_duration": 1.0,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Wait here.",
+    "dubbed_pt": "Por favor, espere aqui um momento até eu voltar para buscá-lo.",
+    "short_fix_pt": "Espere aqui.",
+    "original_duration": 1.0,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Wait here.",
+    "dubbed_es": "Por favor esperame acá un ratito hasta que yo vuelva.",
+    "short_fix_es": "Esperá acá.",
+    "original_duration": 1.0,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Don't jump. please.",
+    "dubbed_hi": "Aapko bilkul bhi koodna nahi chahiye",
+    "short_fix_hi": "Mat koodo.",
+    "original_duration": 1.1,
+    "severity": "WARN"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Don't jump. please.",
+    "dubbed_pt": "Você definitivamente não deve pular",
+    "short_fix_pt": "Não pule.",
+    "original_duration": 1.1,
+    "severity": "WARN"
+  },
+  {
+    "lang": "es",
+    "original_en": "Don't jump. please.",
+    "dubbed_es": "No tenés que saltar de ninguna",
+    "short_fix_es": "No saltes.",
+    "original_duration": 1.1,
+    "severity": "WARN"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Turn left.",
+    "dubbed_hi": "Aage aakar aapko theek apni baayi taraf mudna padega bina ruke.",
+    "short_fix_hi": "Baayein mudo.",
+    "original_duration": 1.0,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Turn left.",
+    "dubbed_pt": "Você vai ter que virar à esquerda assim que chegar ali na frente.",
+    "short_fix_pt": "Vire à esquerda.",
+    "original_duration": 1.0,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Turn left.",
+    "dubbed_es": "Vas a tener que doblar a la izquierda cuando lleguemos al cruce.",
+    "short_fix_es": "Doblá a la izquierda.",
+    "original_duration": 1.0,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Look out!",
+    "dubbed_hi": "Aapko aage bahut dhyan se dekhna chahiye wahan kuch khatra hai!",
+    "short_fix_hi": "Dhyan se!",
+    "original_duration": 0.8,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Look out!",
+    "dubbed_pt": "Você precisa tomar muito cuidado com o que está aí na frente!",
+    "short_fix_pt": "Cuidado!",
+    "original_duration": 0.8,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Look out!",
+    "dubbed_es": "Tenés que tener mucho cuidado y fijarte bien adelante tuyo!",
+    "short_fix_es": "¡Cuidado!",
+    "original_duration": 0.8,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Stop talking. please.",
+    "dubbed_hi": "Mujhe aap logon ki baatein bilkul nahi",
+    "short_fix_hi": "Baat mat karo.",
+    "original_duration": 1.1,
+    "severity": "WARN"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Stop talking. please.",
+    "dubbed_pt": "Eu não quero ouvir vocês falando",
+    "short_fix_pt": "Parem de falar.",
+    "original_duration": 1.1,
+    "severity": "WARN"
+  },
+  {
+    "lang": "es",
+    "original_en": "Stop talking. please.",
+    "dubbed_es": "No quiero escuchar que sigan hablando",
+    "short_fix_es": "Dejen de hablar.",
+    "original_duration": 1.1,
+    "severity": "WARN"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Run away.",
+    "dubbed_hi": "Aap logon ko yahan se turant bhag jana chahiye bina kisi deri ke.",
+    "short_fix_hi": "Bhaag jao.",
+    "original_duration": 1.2,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Run away.",
+    "dubbed_pt": "Vocês têm que sair correndo deste lugar agora mesmo, sem demora.",
+    "short_fix_pt": "Fujam.",
+    "original_duration": 1.2,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Run away.",
+    "dubbed_es": "Ustedes tienen que salir corriendo de este lugar ahora mismo.",
+    "short_fix_es": "Huyan.",
+    "original_duration": 1.2,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Hold the door.",
+    "dubbed_hi": "Kripya karke is darwaze ko thodi der khula rakhiye aur band mat hone dijiye.",
+    "short_fix_hi": "Darwaza pakdo.",
+    "original_duration": 1.2,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Hold the door.",
+    "dubbed_pt": "Por favor, segure esta porta aberta por um segundo longo para mim.",
+    "short_fix_pt": "Segure a porta.",
+    "original_duration": 1.2,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Hold the door.",
+    "dubbed_es": "Por favor aguantá la puerta un segundo y no dejes que se cierre.",
+    "short_fix_es": "Sostené la puerta.",
+    "original_duration": 1.2,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Close your eyes. please.",
+    "dubbed_hi": "Aap apni dono aankhein achchi tarah se",
+    "short_fix_hi": "Aankhein band karo.",
+    "original_duration": 1.3,
+    "severity": "WARN"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Close your eyes. please.",
+    "dubbed_pt": "Você tem que fechar os seus olhos",
+    "short_fix_pt": "Feche os olhos.",
+    "original_duration": 1.3,
+    "severity": "WARN"
+  },
+  {
+    "lang": "es",
+    "original_en": "Close your eyes. please.",
+    "dubbed_es": "Tenés que cerrar los dos ojos",
+    "short_fix_es": "Cerrá los ojos.",
+    "original_duration": 1.3,
+    "severity": "WARN"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Help him.",
+    "dubbed_hi": "Kripya jaldi se us bechare insaan ki thodi bahut madad kar dijiye.",
+    "short_fix_hi": "Madad karo.",
+    "original_duration": 0.9,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Help him.",
+    "dubbed_pt": "Por favor, vá rapidinho e dê uma mão para aquele homem ali ajudar.",
+    "short_fix_pt": "Ajude-o.",
+    "original_duration": 0.9,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Help him.",
+    "dubbed_es": "Por favor andá rapidito y dale una mano a ese hombre.",
+    "short_fix_es": "Ayudalo.",
+    "original_duration": 0.9,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Follow me.",
+    "dubbed_hi": "Aap mere theek peechay peechay chaliye is raste par.",
+    "short_fix_hi": "Peechay aao.",
+    "original_duration": 1.0,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Follow me.",
+    "dubbed_pt": "Você tem que me seguir bem de perto por este exato caminho aqui.",
+    "short_fix_pt": "Siga-me.",
+    "original_duration": 1.0,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Follow me.",
+    "dubbed_es": "Vos tenés que seguirme justo atrás mío por este camino.",
+    "short_fix_es": "Seguime.",
+    "original_duration": 1.0,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Wait here. please.",
+    "dubbed_hi": "Aap yahan par thodi der ke liye intezaar",
+    "short_fix_hi": "Yahan ruko.",
+    "original_duration": 1.0,
+    "severity": "WARN"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Wait here. please.",
+    "dubbed_pt": "Por favor, espere aqui um momento",
+    "short_fix_pt": "Espere aqui.",
+    "original_duration": 1.0,
+    "severity": "WARN"
+  },
+  {
+    "lang": "es",
+    "original_en": "Wait here. please.",
+    "dubbed_es": "Por favor esperame acá un ratito",
+    "short_fix_es": "Esperá acá.",
+    "original_duration": 1.0,
+    "severity": "WARN"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Don't jump.",
+    "dubbed_hi": "Aapko bilkul bhi koodna nahi chahiye kyunki yeh bahut khatarnak hai.",
+    "short_fix_hi": "Mat koodo.",
+    "original_duration": 1.1,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Don't jump.",
+    "dubbed_pt": "Você definitivamente não deve pular agora de jeito nenhum.",
+    "short_fix_pt": "Não pule.",
+    "original_duration": 1.1,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Don't jump.",
+    "dubbed_es": "No tenés que saltar de ninguna manera porque es peligroso.",
+    "short_fix_es": "No saltes.",
+    "original_duration": 1.1,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Turn left.",
+    "dubbed_hi": "Aage aakar aapko theek apni baayi taraf mudna padega bina ruke.",
+    "short_fix_hi": "Baayein mudo.",
+    "original_duration": 1.0,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Turn left.",
+    "dubbed_pt": "Você vai ter que virar à esquerda assim que chegar ali na frente.",
+    "short_fix_pt": "Vire à esquerda.",
+    "original_duration": 1.0,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Turn left.",
+    "dubbed_es": "Vas a tener que doblar a la izquierda cuando lleguemos al cruce.",
+    "short_fix_es": "Doblá a la izquierda.",
+    "original_duration": 1.0,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Look out! please.",
+    "dubbed_hi": "Aapko aage bahut dhyan se dekhna",
+    "short_fix_hi": "Dhyan se!",
+    "original_duration": 0.8,
+    "severity": "WARN"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Look out! please.",
+    "dubbed_pt": "Você precisa tomar muito cuidado com o",
+    "short_fix_pt": "Cuidado!",
+    "original_duration": 0.8,
+    "severity": "WARN"
+  },
+  {
+    "lang": "es",
+    "original_en": "Look out! please.",
+    "dubbed_es": "Tenés que tener mucho cuidado y",
+    "short_fix_es": "¡Cuidado!",
+    "original_duration": 0.8,
+    "severity": "WARN"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Stop talking.",
+    "dubbed_hi": "Mujhe aap logon ki baatein bilkul nahi sunni hain isliye chup ho jayiye.",
+    "short_fix_hi": "Baat mat karo.",
+    "original_duration": 1.1,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Stop talking.",
+    "dubbed_pt": "Eu não quero ouvir vocês falando mais nenhuma palavra agora.",
+    "short_fix_pt": "Parem de falar.",
+    "original_duration": 1.1,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Stop talking.",
+    "dubbed_es": "No quiero escuchar que sigan hablando así que hagan silencio.",
+    "short_fix_es": "Dejen de hablar.",
+    "original_duration": 1.1,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Run away.",
+    "dubbed_hi": "Aap logon ko yahan se turant bhag jana chahiye bina kisi deri ke.",
+    "short_fix_hi": "Bhaag jao.",
+    "original_duration": 1.2,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Run away.",
+    "dubbed_pt": "Vocês têm que sair correndo deste lugar agora mesmo, sem demora.",
+    "short_fix_pt": "Fujam.",
+    "original_duration": 1.2,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Run away.",
+    "dubbed_es": "Ustedes tienen que salir corriendo de este lugar ahora mismo.",
+    "short_fix_es": "Huyan.",
+    "original_duration": 1.2,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Hold the door. please.",
+    "dubbed_hi": "Kripya karke is darwaze ko thodi der khula",
+    "short_fix_hi": "Darwaza pakdo.",
+    "original_duration": 1.2,
+    "severity": "WARN"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Hold the door. please.",
+    "dubbed_pt": "Por favor, segure esta porta aberta por",
+    "short_fix_pt": "Segure a porta.",
+    "original_duration": 1.2,
+    "severity": "WARN"
+  },
+  {
+    "lang": "es",
+    "original_en": "Hold the door. please.",
+    "dubbed_es": "Por favor aguantá la puerta un segundo",
+    "short_fix_es": "Sostené la puerta.",
+    "original_duration": 1.2,
+    "severity": "WARN"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Close your eyes.",
+    "dubbed_hi": "Aap apni dono aankhein achchi tarah se band kar lijiye kholna mat.",
+    "short_fix_hi": "Aankhein band karo.",
+    "original_duration": 1.3,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Close your eyes.",
+    "dubbed_pt": "Você tem que fechar os seus olhos com muita força e não abri-los.",
+    "short_fix_pt": "Feche os olhos.",
+    "original_duration": 1.3,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Close your eyes.",
+    "dubbed_es": "Tenés que cerrar los dos ojos fuertemente y no abrirlos.",
+    "short_fix_es": "Cerrá los ojos.",
+    "original_duration": 1.3,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Help him.",
+    "dubbed_hi": "Kripya jaldi se us bechare insaan ki thodi bahut madad kar dijiye.",
+    "short_fix_hi": "Madad karo.",
+    "original_duration": 0.9,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Help him.",
+    "dubbed_pt": "Por favor, vá rapidinho e dê uma mão para aquele homem ali ajudar.",
+    "short_fix_pt": "Ajude-o.",
+    "original_duration": 0.9,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Help him.",
+    "dubbed_es": "Por favor andá rapidito y dale una mano a ese hombre.",
+    "short_fix_es": "Ayudalo.",
+    "original_duration": 0.9,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Follow me. please.",
+    "dubbed_hi": "Aap mere theek peechay peechay",
+    "short_fix_hi": "Peechay aao.",
+    "original_duration": 1.0,
+    "severity": "WARN"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Follow me. please.",
+    "dubbed_pt": "Você tem que me seguir bem de",
+    "short_fix_pt": "Siga-me.",
+    "original_duration": 1.0,
+    "severity": "WARN"
+  },
+  {
+    "lang": "es",
+    "original_en": "Follow me. please.",
+    "dubbed_es": "Vos tenés que seguirme justo atrás",
+    "short_fix_es": "Seguime.",
+    "original_duration": 1.0,
+    "severity": "WARN"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Wait here.",
+    "dubbed_hi": "Aap yahan par thodi der ke liye intezaar kijiye jab tak main na aa jaun.",
+    "short_fix_hi": "Yahan ruko.",
+    "original_duration": 1.0,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Wait here.",
+    "dubbed_pt": "Por favor, espere aqui um momento até eu voltar para buscá-lo.",
+    "short_fix_pt": "Espere aqui.",
+    "original_duration": 1.0,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Wait here.",
+    "dubbed_es": "Por favor esperame acá un ratito hasta que yo vuelva.",
+    "short_fix_es": "Esperá acá.",
+    "original_duration": 1.0,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Don't jump.",
+    "dubbed_hi": "Aapko bilkul bhi koodna nahi chahiye kyunki yeh bahut khatarnak hai.",
+    "short_fix_hi": "Mat koodo.",
+    "original_duration": 1.1,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Don't jump.",
+    "dubbed_pt": "Você definitivamente não deve pular agora de jeito nenhum.",
+    "short_fix_pt": "Não pule.",
+    "original_duration": 1.1,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Don't jump.",
+    "dubbed_es": "No tenés que saltar de ninguna manera porque es peligroso.",
+    "short_fix_es": "No saltes.",
+    "original_duration": 1.1,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Turn left. please.",
+    "dubbed_hi": "Aage aakar aapko theek apni baayi",
+    "short_fix_hi": "Baayein mudo.",
+    "original_duration": 1.0,
+    "severity": "WARN"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Turn left. please.",
+    "dubbed_pt": "Você vai ter que virar à esquerda",
+    "short_fix_pt": "Vire à esquerda.",
+    "original_duration": 1.0,
+    "severity": "WARN"
+  },
+  {
+    "lang": "es",
+    "original_en": "Turn left. please.",
+    "dubbed_es": "Vas a tener que doblar a la",
+    "short_fix_es": "Doblá a la izquierda.",
+    "original_duration": 1.0,
+    "severity": "WARN"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Look out!",
+    "dubbed_hi": "Aapko aage bahut dhyan se dekhna chahiye wahan kuch khatra hai!",
+    "short_fix_hi": "Dhyan se!",
+    "original_duration": 0.8,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Look out!",
+    "dubbed_pt": "Você precisa tomar muito cuidado com o que está aí na frente!",
+    "short_fix_pt": "Cuidado!",
+    "original_duration": 0.8,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Look out!",
+    "dubbed_es": "Tenés que tener mucho cuidado y fijarte bien adelante tuyo!",
+    "short_fix_es": "¡Cuidado!",
+    "original_duration": 0.8,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Stop talking.",
+    "dubbed_hi": "Mujhe aap logon ki baatein bilkul nahi sunni hain isliye chup ho jayiye.",
+    "short_fix_hi": "Baat mat karo.",
+    "original_duration": 1.1,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Stop talking.",
+    "dubbed_pt": "Eu não quero ouvir vocês falando mais nenhuma palavra agora.",
+    "short_fix_pt": "Parem de falar.",
+    "original_duration": 1.1,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Stop talking.",
+    "dubbed_es": "No quiero escuchar que sigan hablando así que hagan silencio.",
+    "short_fix_es": "Dejen de hablar.",
+    "original_duration": 1.1,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Run away. please.",
+    "dubbed_hi": "Aap logon ko yahan se turant bhag",
+    "short_fix_hi": "Bhaag jao.",
+    "original_duration": 1.2,
+    "severity": "WARN"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Run away. please.",
+    "dubbed_pt": "Vocês têm que sair correndo deste",
+    "short_fix_pt": "Fujam.",
+    "original_duration": 1.2,
+    "severity": "WARN"
+  },
+  {
+    "lang": "es",
+    "original_en": "Run away. please.",
+    "dubbed_es": "Ustedes tienen que salir corriendo de",
+    "short_fix_es": "Huyan.",
+    "original_duration": 1.2,
+    "severity": "WARN"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Hold the door.",
+    "dubbed_hi": "Kripya karke is darwaze ko thodi der khula rakhiye aur band mat hone dijiye.",
+    "short_fix_hi": "Darwaza pakdo.",
+    "original_duration": 1.2,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Hold the door.",
+    "dubbed_pt": "Por favor, segure esta porta aberta por um segundo longo para mim.",
+    "short_fix_pt": "Segure a porta.",
+    "original_duration": 1.2,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Hold the door.",
+    "dubbed_es": "Por favor aguantá la puerta un segundo y no dejes que se cierre.",
+    "short_fix_es": "Sostené la puerta.",
+    "original_duration": 1.2,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Close your eyes.",
+    "dubbed_hi": "Aap apni dono aankhein achchi tarah se band kar lijiye kholna mat.",
+    "short_fix_hi": "Aankhein band karo.",
+    "original_duration": 1.3,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Close your eyes.",
+    "dubbed_pt": "Você tem que fechar os seus olhos com muita força e não abri-los.",
+    "short_fix_pt": "Feche os olhos.",
+    "original_duration": 1.3,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Close your eyes.",
+    "dubbed_es": "Tenés que cerrar los dos ojos fuertemente y no abrirlos.",
+    "short_fix_es": "Cerrá los ojos.",
+    "original_duration": 1.3,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Help him. please.",
+    "dubbed_hi": "Kripya jaldi se us bechare insaan ki",
+    "short_fix_hi": "Madad karo.",
+    "original_duration": 0.9,
+    "severity": "WARN"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Help him. please.",
+    "dubbed_pt": "Por favor, vá rapidinho e dê uma",
+    "short_fix_pt": "Ajude-o.",
+    "original_duration": 0.9,
+    "severity": "WARN"
+  },
+  {
+    "lang": "es",
+    "original_en": "Help him. please.",
+    "dubbed_es": "Por favor andá rapidito y dale",
+    "short_fix_es": "Ayudalo.",
+    "original_duration": 0.9,
+    "severity": "WARN"
+  },
+  {
+    "lang": "hi",
+    "original_en": "Follow me.",
+    "dubbed_hi": "Aap mere theek peechay peechay chaliye is raste par.",
+    "short_fix_hi": "Peechay aao.",
+    "original_duration": 1.0,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "pt",
+    "original_en": "Follow me.",
+    "dubbed_pt": "Você tem que me seguir bem de perto por este exato caminho aqui.",
+    "short_fix_pt": "Siga-me.",
+    "original_duration": 1.0,
+    "severity": "BLOCK"
+  },
+  {
+    "lang": "es",
+    "original_en": "Follow me.",
+    "dubbed_es": "Vos tenés que seguirme justo atrás mío por este camino.",
+    "short_fix_es": "Seguime.",
+    "original_duration": 1.0,
+    "severity": "BLOCK"
+  }
+]

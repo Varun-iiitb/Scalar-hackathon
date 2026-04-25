@@ -1,0 +1,28 @@
+name: dubguard
+version: 1.0.0
+description: >
+  Reinforcement learning environment where an LLM agent performs quality control
+  on AI-dubbed video script segments, deciding to block, warn, or pass each
+  segment and suggesting timing-safe fixes when needed.
+
+observation_space: structured_text
+action_space: structured_text
+
+max_steps_per_episode: 1
+
+reward_range:
+  min: -0.3
+  max: 1.0
+
+supported_languages:
+  - code: hi
+    name: Hindi
+  - code: pt
+    name: Portuguese
+  - code: es
+    name: Spanish
+
+curriculum_levels:
+  - easy
+  - medium
+  - hard

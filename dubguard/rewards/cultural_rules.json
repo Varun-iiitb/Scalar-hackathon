@@ -1,0 +1,29 @@
+{
+  "rules": [
+    {
+      "rule_id": "IN_HI_001",
+      "locale": "hi",
+      "description": "Avoid overly informal or disrespectful pronouns ('tu') in formal or corporate contexts. Use 'aap' instead."
+    },
+    {
+      "rule_id": "PT_BR_001",
+      "locale": "pt-BR",
+      "description": "Do not translate 'football' to 'futebol americano' when the context is clearly soccer (association football); use 'futebol'."
+    },
+    {
+      "rule_id": "ES_AR_001",
+      "locale": "es-AR",
+      "description": "Use 'vos' conjugation instead of 'tú' for the second-person singular pronoun in colloquial Argentine dialogue."
+    },
+    {
+      "rule_id": "ES_MX_001",
+      "locale": "es-MX",
+      "description": "Do not use 'coger' for grabbing or taking an object, as it is highly vulgar in Mexican slang. Use 'tomar' or 'agarrar'."
+    },
+    {
+      "rule_id": "IN_HI_002",
+      "locale": "hi",
+      "description": "Translating idioms literally is incorrect; contextually map idioms to valid Indian equivalents (e.g., 'raining cats and dogs' -> 'musladhar barish')."
+    }
+  ]
+}

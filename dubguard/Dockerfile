@@ -1,0 +1,15 @@
+FROM pytorch/pytorch:2.1.0-cuda11.8-cudnn8-runtime
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y git ffmpeg \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY training/requirements.txt training/requirements.txt
+RUN pip install --no-cache-dir -r training/requirements.txt
+
+COPY . .
+
+ENV PYTHONUNBUFFERED=1
+
+CMD ["python", "training/train.py"]

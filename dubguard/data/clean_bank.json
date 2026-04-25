@@ -1,0 +1,902 @@
+[
+  {
+    "lang": "hi",
+    "original_en": "I agree completely. [0]",
+    "dubbed_hi": "Main poori tarah sehmat hoon.",
+    "original_duration": 1.2
+  },
+  {
+    "lang": "pt",
+    "original_en": "I agree completely. [0]",
+    "dubbed_pt": "Eu concordo completamente.",
+    "original_duration": 1.2
+  },
+  {
+    "lang": "es",
+    "original_en": "I agree completely. [0]",
+    "dubbed_es": "Estoy completamente de acuerdo.",
+    "original_duration": 1.2
+  },
+  {
+    "lang": "hi",
+    "original_en": "Where are you going? [1]",
+    "dubbed_hi": "Tum kahan ja rahe ho?",
+    "original_duration": 1.5
+  },
+  {
+    "lang": "pt",
+    "original_en": "Where are you going? [1]",
+    "dubbed_pt": "Onde você está indo?",
+    "original_duration": 1.5
+  },
+  {
+    "lang": "es",
+    "original_en": "Where are you going? [1]",
+    "dubbed_es": "¿A dónde vas?",
+    "original_duration": 1.5
+  },
+  {
+    "lang": "hi",
+    "original_en": "This is perfectly fine. [2]",
+    "dubbed_hi": "Yeh bilkul theek hai.",
+    "original_duration": 1.4
+  },
+  {
+    "lang": "pt",
+    "original_en": "This is perfectly fine. [2]",
+    "dubbed_pt": "Isso está perfeitamente bem.",
+    "original_duration": 1.4
+  },
+  {
+    "lang": "es",
+    "original_en": "This is perfectly fine. [2]",
+    "dubbed_es": "Esto está perfectamente bien.",
+    "original_duration": 1.4
+  },
+  {
+    "lang": "hi",
+    "original_en": "Put it on the table. [3]",
+    "dubbed_hi": "Ise mez par rakh do.",
+    "original_duration": 1.3
+  },
+  {
+    "lang": "pt",
+    "original_en": "Put it on the table. [3]",
+    "dubbed_pt": "Coloque na mesa.",
+    "original_duration": 1.3
+  },
+  {
+    "lang": "es",
+    "original_en": "Put it on the table. [3]",
+    "dubbed_es": "Ponelo en la mesa.",
+    "original_duration": 1.3
+  },
+  {
+    "lang": "hi",
+    "original_en": "I will call you later. [4]",
+    "dubbed_hi": "Main tumhe baad mein phone karunga.",
+    "original_duration": 1.6
+  },
+  {
+    "lang": "pt",
+    "original_en": "I will call you later. [4]",
+    "dubbed_pt": "Eu ligo para você mais tarde.",
+    "original_duration": 1.6
+  },
+  {
+    "lang": "es",
+    "original_en": "I will call you later. [4]",
+    "dubbed_es": "Te llamo más tarde.",
+    "original_duration": 1.6
+  },
+  {
+    "lang": "hi",
+    "original_en": "I agree completely. [5]",
+    "dubbed_hi": "Main poori tarah sehmat hoon.",
+    "original_duration": 1.2
+  },
+  {
+    "lang": "pt",
+    "original_en": "I agree completely. [5]",
+    "dubbed_pt": "Eu concordo completamente.",
+    "original_duration": 1.2
+  },
+  {
+    "lang": "es",
+    "original_en": "I agree completely. [5]",
+    "dubbed_es": "Estoy completamente de acuerdo.",
+    "original_duration": 1.2
+  },
+  {
+    "lang": "hi",
+    "original_en": "Where are you going? [6]",
+    "dubbed_hi": "Tum kahan ja rahe ho?",
+    "original_duration": 1.5
+  },
+  {
+    "lang": "pt",
+    "original_en": "Where are you going? [6]",
+    "dubbed_pt": "Onde você está indo?",
+    "original_duration": 1.5
+  },
+  {
+    "lang": "es",
+    "original_en": "Where are you going? [6]",
+    "dubbed_es": "¿A dónde vas?",
+    "original_duration": 1.5
+  },
+  {
+    "lang": "hi",
+    "original_en": "This is perfectly fine. [7]",
+    "dubbed_hi": "Yeh bilkul theek hai.",
+    "original_duration": 1.4
+  },
+  {
+    "lang": "pt",
+    "original_en": "This is perfectly fine. [7]",
+    "dubbed_pt": "Isso está perfeitamente bem.",
+    "original_duration": 1.4
+  },
+  {
+    "lang": "es",
+    "original_en": "This is perfectly fine. [7]",
+    "dubbed_es": "Esto está perfectamente bien.",
+    "original_duration": 1.4
+  },
+  {
+    "lang": "hi",
+    "original_en": "Put it on the table. [8]",
+    "dubbed_hi": "Ise mez par rakh do.",
+    "original_duration": 1.3
+  },
+  {
+    "lang": "pt",
+    "original_en": "Put it on the table. [8]",
+    "dubbed_pt": "Coloque na mesa.",
+    "original_duration": 1.3
+  },
+  {
+    "lang": "es",
+    "original_en": "Put it on the table. [8]",
+    "dubbed_es": "Ponelo en la mesa.",
+    "original_duration": 1.3
+  },
+  {
+    "lang": "hi",
+    "original_en": "I will call you later. [9]",
+    "dubbed_hi": "Main tumhe baad mein phone karunga.",
+    "original_duration": 1.6
+  },
+  {
+    "lang": "pt",
+    "original_en": "I will call you later. [9]",
+    "dubbed_pt": "Eu ligo para você mais tarde.",
+    "original_duration": 1.6
+  },
+  {
+    "lang": "es",
+    "original_en": "I will call you later. [9]",
+    "dubbed_es": "Te llamo más tarde.",
+    "original_duration": 1.6
+  },
+  {
+    "lang": "hi",
+    "original_en": "I agree completely. [10]",
+    "dubbed_hi": "Main poori tarah sehmat hoon.",
+    "original_duration": 1.2
+  },
+  {
+    "lang": "pt",
+    "original_en": "I agree completely. [10]",
+    "dubbed_pt": "Eu concordo completamente.",
+    "original_duration": 1.2
+  },
+  {
+    "lang": "es",
+    "original_en": "I agree completely. [10]",
+    "dubbed_es": "Estoy completamente de acuerdo.",
+    "original_duration": 1.2
+  },
+  {
+    "lang": "hi",
+    "original_en": "Where are you going? [11]",
+    "dubbed_hi": "Tum kahan ja rahe ho?",
+    "original_duration": 1.5
+  },
+  {
+    "lang": "pt",
+    "original_en": "Where are you going? [11]",
+    "dubbed_pt": "Onde você está indo?",
+    "original_duration": 1.5
+  },
+  {
+    "lang": "es",
+    "original_en": "Where are you going? [11]",
+    "dubbed_es": "¿A dónde vas?",
+    "original_duration": 1.5
+  },
+  {
+    "lang": "hi",
+    "original_en": "This is perfectly fine. [12]",
+    "dubbed_hi": "Yeh bilkul theek hai.",
+    "original_duration": 1.4
+  },
+  {
+    "lang": "pt",
+    "original_en": "This is perfectly fine. [12]",
+    "dubbed_pt": "Isso está perfeitamente bem.",
+    "original_duration": 1.4
+  },
+  {
+    "lang": "es",
+    "original_en": "This is perfectly fine. [12]",
+    "dubbed_es": "Esto está perfectamente bien.",
+    "original_duration": 1.4
+  },
+  {
+    "lang": "hi",
+    "original_en": "Put it on the table. [13]",
+    "dubbed_hi": "Ise mez par rakh do.",
+    "original_duration": 1.3
+  },
+  {
+    "lang": "pt",
+    "original_en": "Put it on the table. [13]",
+    "dubbed_pt": "Coloque na mesa.",
+    "original_duration": 1.3
+  },
+  {
+    "lang": "es",
+    "original_en": "Put it on the table. [13]",
+    "dubbed_es": "Ponelo en la mesa.",
+    "original_duration": 1.3
+  },
+  {
+    "lang": "hi",
+    "original_en": "I will call you later. [14]",
+    "dubbed_hi": "Main tumhe baad mein phone karunga.",
+    "original_duration": 1.6
+  },
+  {
+    "lang": "pt",
+    "original_en": "I will call you later. [14]",
+    "dubbed_pt": "Eu ligo para você mais tarde.",
+    "original_duration": 1.6
+  },
+  {
+    "lang": "es",
+    "original_en": "I will call you later. [14]",
+    "dubbed_es": "Te llamo más tarde.",
+    "original_duration": 1.6
+  },
+  {
+    "lang": "hi",
+    "original_en": "I agree completely. [15]",
+    "dubbed_hi": "Main poori tarah sehmat hoon.",
+    "original_duration": 1.2
+  },
+  {
+    "lang": "pt",
+    "original_en": "I agree completely. [15]",
+    "dubbed_pt": "Eu concordo completamente.",
+    "original_duration": 1.2
+  },
+  {
+    "lang": "es",
+    "original_en": "I agree completely. [15]",
+    "dubbed_es": "Estoy completamente de acuerdo.",
+    "original_duration": 1.2
+  },
+  {
+    "lang": "hi",
+    "original_en": "Where are you going? [16]",
+    "dubbed_hi": "Tum kahan ja rahe ho?",
+    "original_duration": 1.5
+  },
+  {
+    "lang": "pt",
+    "original_en": "Where are you going? [16]",
+    "dubbed_pt": "Onde você está indo?",
+    "original_duration": 1.5
+  },
+  {
+    "lang": "es",
+    "original_en": "Where are you going? [16]",
+    "dubbed_es": "¿A dónde vas?",
+    "original_duration": 1.5
+  },
+  {
+    "lang": "hi",
+    "original_en": "This is perfectly fine. [17]",
+    "dubbed_hi": "Yeh bilkul theek hai.",
+    "original_duration": 1.4
+  },
+  {
+    "lang": "pt",
+    "original_en": "This is perfectly fine. [17]",
+    "dubbed_pt": "Isso está perfeitamente bem.",
+    "original_duration": 1.4
+  },
+  {
+    "lang": "es",
+    "original_en": "This is perfectly fine. [17]",
+    "dubbed_es": "Esto está perfectamente bien.",
+    "original_duration": 1.4
+  },
+  {
+    "lang": "hi",
+    "original_en": "Put it on the table. [18]",
+    "dubbed_hi": "Ise mez par rakh do.",
+    "original_duration": 1.3
+  },
+  {
+    "lang": "pt",
+    "original_en": "Put it on the table. [18]",
+    "dubbed_pt": "Coloque na mesa.",
+    "original_duration": 1.3
+  },
+  {
+    "lang": "es",
+    "original_en": "Put it on the table. [18]",
+    "dubbed_es": "Ponelo en la mesa.",
+    "original_duration": 1.3
+  },
+  {
+    "lang": "hi",
+    "original_en": "I will call you later. [19]",
+    "dubbed_hi": "Main tumhe baad mein phone karunga.",
+    "original_duration": 1.6
+  },
+  {
+    "lang": "pt",
+    "original_en": "I will call you later. [19]",
+    "dubbed_pt": "Eu ligo para você mais tarde.",
+    "original_duration": 1.6
+  },
+  {
+    "lang": "es",
+    "original_en": "I will call you later. [19]",
+    "dubbed_es": "Te llamo más tarde.",
+    "original_duration": 1.6
+  },
+  {
+    "lang": "hi",
+    "original_en": "I agree completely. [20]",
+    "dubbed_hi": "Main poori tarah sehmat hoon.",
+    "original_duration": 1.2
+  },
+  {
+    "lang": "pt",
+    "original_en": "I agree completely. [20]",
+    "dubbed_pt": "Eu concordo completamente.",
+    "original_duration": 1.2
+  },
+  {
+    "lang": "es",
+    "original_en": "I agree completely. [20]",
+    "dubbed_es": "Estoy completamente de acuerdo.",
+    "original_duration": 1.2
+  },
+  {
+    "lang": "hi",
+    "original_en": "Where are you going? [21]",
+    "dubbed_hi": "Tum kahan ja rahe ho?",
+    "original_duration": 1.5
+  },
+  {
+    "lang": "pt",
+    "original_en": "Where are you going? [21]",
+    "dubbed_pt": "Onde você está indo?",
+    "original_duration": 1.5
+  },
+  {
+    "lang": "es",
+    "original_en": "Where are you going? [21]",
+    "dubbed_es": "¿A dónde vas?",
+    "original_duration": 1.5
+  },
+  {
+    "lang": "hi",
+    "original_en": "This is perfectly fine. [22]",
+    "dubbed_hi": "Yeh bilkul theek hai.",
+    "original_duration": 1.4
+  },
+  {
+    "lang": "pt",
+    "original_en": "This is perfectly fine. [22]",
+    "dubbed_pt": "Isso está perfeitamente bem.",
+    "original_duration": 1.4
+  },
+  {
+    "lang": "es",
+    "original_en": "This is perfectly fine. [22]",
+    "dubbed_es": "Esto está perfectamente bien.",
+    "original_duration": 1.4
+  },
+  {
+    "lang": "hi",
+    "original_en": "Put it on the table. [23]",
+    "dubbed_hi": "Ise mez par rakh do.",
+    "original_duration": 1.3
+  },
+  {
+    "lang": "pt",
+    "original_en": "Put it on the table. [23]",
+    "dubbed_pt": "Coloque na mesa.",
+    "original_duration": 1.3
+  },
+  {
+    "lang": "es",
+    "original_en": "Put it on the table. [23]",
+    "dubbed_es": "Ponelo en la mesa.",
+    "original_duration": 1.3
+  },
+  {
+    "lang": "hi",
+    "original_en": "I will call you later. [24]",
+    "dubbed_hi": "Main tumhe baad mein phone karunga.",
+    "original_duration": 1.6
+  },
+  {
+    "lang": "pt",
+    "original_en": "I will call you later. [24]",
+    "dubbed_pt": "Eu ligo para você mais tarde.",
+    "original_duration": 1.6
+  },
+  {
+    "lang": "es",
+    "original_en": "I will call you later. [24]",
+    "dubbed_es": "Te llamo más tarde.",
+    "original_duration": 1.6
+  },
+  {
+    "lang": "hi",
+    "original_en": "I agree completely. [25]",
+    "dubbed_hi": "Main poori tarah sehmat hoon.",
+    "original_duration": 1.2
+  },
+  {
+    "lang": "pt",
+    "original_en": "I agree completely. [25]",
+    "dubbed_pt": "Eu concordo completamente.",
+    "original_duration": 1.2
+  },
+  {
+    "lang": "es",
+    "original_en": "I agree completely. [25]",
+    "dubbed_es": "Estoy completamente de acuerdo.",
+    "original_duration": 1.2
+  },
+  {
+    "lang": "hi",
+    "original_en": "Where are you going? [26]",
+    "dubbed_hi": "Tum kahan ja rahe ho?",
+    "original_duration": 1.5
+  },
+  {
+    "lang": "pt",
+    "original_en": "Where are you going? [26]",
+    "dubbed_pt": "Onde você está indo?",
+    "original_duration": 1.5
+  },
+  {
+    "lang": "es",
+    "original_en": "Where are you going? [26]",
+    "dubbed_es": "¿A dónde vas?",
+    "original_duration": 1.5
+  },
+  {
+    "lang": "hi",
+    "original_en": "This is perfectly fine. [27]",
+    "dubbed_hi": "Yeh bilkul theek hai.",
+    "original_duration": 1.4
+  },
+  {
+    "lang": "pt",
+    "original_en": "This is perfectly fine. [27]",
+    "dubbed_pt": "Isso está perfeitamente bem.",
+    "original_duration": 1.4
+  },
+  {
+    "lang": "es",
+    "original_en": "This is perfectly fine. [27]",
+    "dubbed_es": "Esto está perfectamente bien.",
+    "original_duration": 1.4
+  },
+  {
+    "lang": "hi",
+    "original_en": "Put it on the table. [28]",
+    "dubbed_hi": "Ise mez par rakh do.",
+    "original_duration": 1.3
+  },
+  {
+    "lang": "pt",
+    "original_en": "Put it on the table. [28]",
+    "dubbed_pt": "Coloque na mesa.",
+    "original_duration": 1.3
+  },
+  {
+    "lang": "es",
+    "original_en": "Put it on the table. [28]",
+    "dubbed_es": "Ponelo en la mesa.",
+    "original_duration": 1.3
+  },
+  {
+    "lang": "hi",
+    "original_en": "I will call you later. [29]",
+    "dubbed_hi": "Main tumhe baad mein phone karunga.",
+    "original_duration": 1.6
+  },
+  {
+    "lang": "pt",
+    "original_en": "I will call you later. [29]",
+    "dubbed_pt": "Eu ligo para você mais tarde.",
+    "original_duration": 1.6
+  },
+  {
+    "lang": "es",
+    "original_en": "I will call you later. [29]",
+    "dubbed_es": "Te llamo más tarde.",
+    "original_duration": 1.6
+  },
+  {
+    "lang": "hi",
+    "original_en": "I agree completely. [30]",
+    "dubbed_hi": "Main poori tarah sehmat hoon.",
+    "original_duration": 1.2
+  },
+  {
+    "lang": "pt",
+    "original_en": "I agree completely. [30]",
+    "dubbed_pt": "Eu concordo completamente.",
+    "original_duration": 1.2
+  },
+  {
+    "lang": "es",
+    "original_en": "I agree completely. [30]",
+    "dubbed_es": "Estoy completamente de acuerdo.",
+    "original_duration": 1.2
+  },
+  {
+    "lang": "hi",
+    "original_en": "Where are you going? [31]",
+    "dubbed_hi": "Tum kahan ja rahe ho?",
+    "original_duration": 1.5
+  },
+  {
+    "lang": "pt",
+    "original_en": "Where are you going? [31]",
+    "dubbed_pt": "Onde você está indo?",
+    "original_duration": 1.5
+  },
+  {
+    "lang": "es",
+    "original_en": "Where are you going? [31]",
+    "dubbed_es": "¿A dónde vas?",
+    "original_duration": 1.5
+  },
+  {
+    "lang": "hi",
+    "original_en": "This is perfectly fine. [32]",
+    "dubbed_hi": "Yeh bilkul theek hai.",
+    "original_duration": 1.4
+  },
+  {
+    "lang": "pt",
+    "original_en": "This is perfectly fine. [32]",
+    "dubbed_pt": "Isso está perfeitamente bem.",
+    "original_duration": 1.4
+  },
+  {
+    "lang": "es",
+    "original_en": "This is perfectly fine. [32]",
+    "dubbed_es": "Esto está perfectamente bien.",
+    "original_duration": 1.4
+  },
+  {
+    "lang": "hi",
+    "original_en": "Put it on the table. [33]",
+    "dubbed_hi": "Ise mez par rakh do.",
+    "original_duration": 1.3
+  },
+  {
+    "lang": "pt",
+    "original_en": "Put it on the table. [33]",
+    "dubbed_pt": "Coloque na mesa.",
+    "original_duration": 1.3
+  },
+  {
+    "lang": "es",
+    "original_en": "Put it on the table. [33]",
+    "dubbed_es": "Ponelo en la mesa.",
+    "original_duration": 1.3
+  },
+  {
+    "lang": "hi",
+    "original_en": "I will call you later. [34]",
+    "dubbed_hi": "Main tumhe baad mein phone karunga.",
+    "original_duration": 1.6
+  },
+  {
+    "lang": "pt",
+    "original_en": "I will call you later. [34]",
+    "dubbed_pt": "Eu ligo para você mais tarde.",
+    "original_duration": 1.6
+  },
+  {
+    "lang": "es",
+    "original_en": "I will call you later. [34]",
+    "dubbed_es": "Te llamo más tarde.",
+    "original_duration": 1.6
+  },
+  {
+    "lang": "hi",
+    "original_en": "I agree completely. [35]",
+    "dubbed_hi": "Main poori tarah sehmat hoon.",
+    "original_duration": 1.2
+  },
+  {
+    "lang": "pt",
+    "original_en": "I agree completely. [35]",
+    "dubbed_pt": "Eu concordo completamente.",
+    "original_duration": 1.2
+  },
+  {
+    "lang": "es",
+    "original_en": "I agree completely. [35]",
+    "dubbed_es": "Estoy completamente de acuerdo.",
+    "original_duration": 1.2
+  },
+  {
+    "lang": "hi",
+    "original_en": "Where are you going? [36]",
+    "dubbed_hi": "Tum kahan ja rahe ho?",
+    "original_duration": 1.5
+  },
+  {
+    "lang": "pt",
+    "original_en": "Where are you going? [36]",
+    "dubbed_pt": "Onde você está indo?",
+    "original_duration": 1.5
+  },
+  {
+    "lang": "es",
+    "original_en": "Where are you going? [36]",
+    "dubbed_es": "¿A dónde vas?",
+    "original_duration": 1.5
+  },
+  {
+    "lang": "hi",
+    "original_en": "This is perfectly fine. [37]",
+    "dubbed_hi": "Yeh bilkul theek hai.",
+    "original_duration": 1.4
+  },
+  {
+    "lang": "pt",
+    "original_en": "This is perfectly fine. [37]",
+    "dubbed_pt": "Isso está perfeitamente bem.",
+    "original_duration": 1.4
+  },
+  {
+    "lang": "es",
+    "original_en": "This is perfectly fine. [37]",
+    "dubbed_es": "Esto está perfectamente bien.",
+    "original_duration": 1.4
+  },
+  {
+    "lang": "hi",
+    "original_en": "Put it on the table. [38]",
+    "dubbed_hi": "Ise mez par rakh do.",
+    "original_duration": 1.3
+  },
+  {
+    "lang": "pt",
+    "original_en": "Put it on the table. [38]",
+    "dubbed_pt": "Coloque na mesa.",
+    "original_duration": 1.3
+  },
+  {
+    "lang": "es",
+    "original_en": "Put it on the table. [38]",
+    "dubbed_es": "Ponelo en la mesa.",
+    "original_duration": 1.3
+  },
+  {
+    "lang": "hi",
+    "original_en": "I will call you later. [39]",
+    "dubbed_hi": "Main tumhe baad mein phone karunga.",
+    "original_duration": 1.6
+  },
+  {
+    "lang": "pt",
+    "original_en": "I will call you later. [39]",
+    "dubbed_pt": "Eu ligo para você mais tarde.",
+    "original_duration": 1.6
+  },
+  {
+    "lang": "es",
+    "original_en": "I will call you later. [39]",
+    "dubbed_es": "Te llamo más tarde.",
+    "original_duration": 1.6
+  },
+  {
+    "lang": "hi",
+    "original_en": "I agree completely. [40]",
+    "dubbed_hi": "Main poori tarah sehmat hoon.",
+    "original_duration": 1.2
+  },
+  {
+    "lang": "pt",
+    "original_en": "I agree completely. [40]",
+    "dubbed_pt": "Eu concordo completamente.",
+    "original_duration": 1.2
+  },
+  {
+    "lang": "es",
+    "original_en": "I agree completely. [40]",
+    "dubbed_es": "Estoy completamente de acuerdo.",
+    "original_duration": 1.2
+  },
+  {
+    "lang": "hi",
+    "original_en": "Where are you going? [41]",
+    "dubbed_hi": "Tum kahan ja rahe ho?",
+    "original_duration": 1.5
+  },
+  {
+    "lang": "pt",
+    "original_en": "Where are you going? [41]",
+    "dubbed_pt": "Onde você está indo?",
+    "original_duration": 1.5
+  },
+  {
+    "lang": "es",
+    "original_en": "Where are you going? [41]",
+    "dubbed_es": "¿A dónde vas?",
+    "original_duration": 1.5
+  },
+  {
+    "lang": "hi",
+    "original_en": "This is perfectly fine. [42]",
+    "dubbed_hi": "Yeh bilkul theek hai.",
+    "original_duration": 1.4
+  },
+  {
+    "lang": "pt",
+    "original_en": "This is perfectly fine. [42]",
+    "dubbed_pt": "Isso está perfeitamente bem.",
+    "original_duration": 1.4
+  },
+  {
+    "lang": "es",
+    "original_en": "This is perfectly fine. [42]",
+    "dubbed_es": "Esto está perfectamente bien.",
+    "original_duration": 1.4
+  },
+  {
+    "lang": "hi",
+    "original_en": "Put it on the table. [43]",
+    "dubbed_hi": "Ise mez par rakh do.",
+    "original_duration": 1.3
+  },
+  {
+    "lang": "pt",
+    "original_en": "Put it on the table. [43]",
+    "dubbed_pt": "Coloque na mesa.",
+    "original_duration": 1.3
+  },
+  {
+    "lang": "es",
+    "original_en": "Put it on the table. [43]",
+    "dubbed_es": "Ponelo en la mesa.",
+    "original_duration": 1.3
+  },
+  {
+    "lang": "hi",
+    "original_en": "I will call you later. [44]",
+    "dubbed_hi": "Main tumhe baad mein phone karunga.",
+    "original_duration": 1.6
+  },
+  {
+    "lang": "pt",
+    "original_en": "I will call you later. [44]",
+    "dubbed_pt": "Eu ligo para você mais tarde.",
+    "original_duration": 1.6
+  },
+  {
+    "lang": "es",
+    "original_en": "I will call you later. [44]",
+    "dubbed_es": "Te llamo más tarde.",
+    "original_duration": 1.6
+  },
+  {
+    "lang": "hi",
+    "original_en": "I agree completely. [45]",
+    "dubbed_hi": "Main poori tarah sehmat hoon.",
+    "original_duration": 1.2
+  },
+  {
+    "lang": "pt",
+    "original_en": "I agree completely. [45]",
+    "dubbed_pt": "Eu concordo completamente.",
+    "original_duration": 1.2
+  },
+  {
+    "lang": "es",
+    "original_en": "I agree completely. [45]",
+    "dubbed_es": "Estoy completamente de acuerdo.",
+    "original_duration": 1.2
+  },
+  {
+    "lang": "hi",
+    "original_en": "Where are you going? [46]",
+    "dubbed_hi": "Tum kahan ja rahe ho?",
+    "original_duration": 1.5
+  },
+  {
+    "lang": "pt",
+    "original_en": "Where are you going? [46]",
+    "dubbed_pt": "Onde você está indo?",
+    "original_duration": 1.5
+  },
+  {
+    "lang": "es",
+    "original_en": "Where are you going? [46]",
+    "dubbed_es": "¿A dónde vas?",
+    "original_duration": 1.5
+  },
+  {
+    "lang": "hi",
+    "original_en": "This is perfectly fine. [47]",
+    "dubbed_hi": "Yeh bilkul theek hai.",
+    "original_duration": 1.4
+  },
+  {
+    "lang": "pt",
+    "original_en": "This is perfectly fine. [47]",
+    "dubbed_pt": "Isso está perfeitamente bem.",
+    "original_duration": 1.4
+  },
+  {
+    "lang": "es",
+    "original_en": "This is perfectly fine. [47]",
+    "dubbed_es": "Esto está perfectamente bien.",
+    "original_duration": 1.4
+  },
+  {
+    "lang": "hi",
+    "original_en": "Put it on the table. [48]",
+    "dubbed_hi": "Ise mez par rakh do.",
+    "original_duration": 1.3
+  },
+  {
+    "lang": "pt",
+    "original_en": "Put it on the table. [48]",
+    "dubbed_pt": "Coloque na mesa.",
+    "original_duration": 1.3
+  },
+  {
+    "lang": "es",
+    "original_en": "Put it on the table. [48]",
+    "dubbed_es": "Ponelo en la mesa.",
+    "original_duration": 1.3
+  },
+  {
+    "lang": "hi",
+    "original_en": "I will call you later. [49]",
+    "dubbed_hi": "Main tumhe baad mein phone karunga.",
+    "original_duration": 1.6
+  },
+  {
+    "lang": "pt",
+    "original_en": "I will call you later. [49]",
+    "dubbed_pt": "Eu ligo para você mais tarde.",
+    "original_duration": 1.6
+  },
+  {
+    "lang": "es",
+    "original_en": "I will call you later. [49]",
+    "dubbed_es": "Te llamo más tarde.",
+    "original_duration": 1.6
+  }
+]

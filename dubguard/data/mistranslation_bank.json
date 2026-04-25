@@ -1,0 +1,702 @@
+[
+  {
+    "lang": "hi",
+    "original_en": "I need 2 minutes.",
+    "correct_dubbed_hi": "Mujhe do minute chahiye.",
+    "wrong_dubbed_hi": "Mujhe bhees minute chahiye.",
+    "error_description": "number swap: 2 -> 20"
+  },
+  {
+    "lang": "hi",
+    "original_en": "We have 2 people.",
+    "correct_dubbed_hi": "Hamare paas do log hain.",
+    "wrong_dubbed_hi": "Hamare paas bhees log hain.",
+    "error_description": "number swap: 2 -> 20"
+  },
+  {
+    "lang": "hi",
+    "original_en": "It costs 2 dollars.",
+    "correct_dubbed_hi": "Iska dam do dollar hai.",
+    "wrong_dubbed_hi": "Iska dam bhees dollar hai.",
+    "error_description": "number swap: 2 -> 20"
+  },
+  {
+    "lang": "hi",
+    "original_en": "I need 3 minutes.",
+    "correct_dubbed_hi": "Mujhe teen minute chahiye.",
+    "wrong_dubbed_hi": "Mujhe terah minute chahiye.",
+    "error_description": "number swap: 3 -> 13"
+  },
+  {
+    "lang": "hi",
+    "original_en": "We have 3 people.",
+    "correct_dubbed_hi": "Hamare paas teen log hain.",
+    "wrong_dubbed_hi": "Hamare paas terah log hain.",
+    "error_description": "number swap: 3 -> 13"
+  },
+  {
+    "lang": "hi",
+    "original_en": "It costs 3 dollars.",
+    "correct_dubbed_hi": "Iska dam teen dollar hai.",
+    "wrong_dubbed_hi": "Iska dam terah dollar hai.",
+    "error_description": "number swap: 3 -> 13"
+  },
+  {
+    "lang": "hi",
+    "original_en": "I need 4 minutes.",
+    "correct_dubbed_hi": "Mujhe chaar minute chahiye.",
+    "wrong_dubbed_hi": "Mujhe chalees minute chahiye.",
+    "error_description": "number swap: 4 -> 40"
+  },
+  {
+    "lang": "hi",
+    "original_en": "We have 4 people.",
+    "correct_dubbed_hi": "Hamare paas chaar log hain.",
+    "wrong_dubbed_hi": "Hamare paas chalees log hain.",
+    "error_description": "number swap: 4 -> 40"
+  },
+  {
+    "lang": "hi",
+    "original_en": "It costs 4 dollars.",
+    "correct_dubbed_hi": "Iska dam chaar dollar hai.",
+    "wrong_dubbed_hi": "Iska dam chalees dollar hai.",
+    "error_description": "number swap: 4 -> 40"
+  },
+  {
+    "lang": "hi",
+    "original_en": "I need 5 minutes.",
+    "correct_dubbed_hi": "Mujhe paanch minute chahiye.",
+    "wrong_dubbed_hi": "Mujhe pachaas minute chahiye.",
+    "error_description": "number swap: 5 -> 50"
+  },
+  {
+    "lang": "hi",
+    "original_en": "We have 5 people.",
+    "correct_dubbed_hi": "Hamare paas paanch log hain.",
+    "wrong_dubbed_hi": "Hamare paas pachaas log hain.",
+    "error_description": "number swap: 5 -> 50"
+  },
+  {
+    "lang": "hi",
+    "original_en": "It costs 5 dollars.",
+    "correct_dubbed_hi": "Iska dam paanch dollar hai.",
+    "wrong_dubbed_hi": "Iska dam pachaas dollar hai.",
+    "error_description": "number swap: 5 -> 50"
+  },
+  {
+    "lang": "hi",
+    "original_en": "I need 8 minutes.",
+    "correct_dubbed_hi": "Mujhe aath minute chahiye.",
+    "wrong_dubbed_hi": "Mujhe assi minute chahiye.",
+    "error_description": "number swap: 8 -> 80"
+  },
+  {
+    "lang": "hi",
+    "original_en": "We have 8 people.",
+    "correct_dubbed_hi": "Hamare paas aath log hain.",
+    "wrong_dubbed_hi": "Hamare paas assi log hain.",
+    "error_description": "number swap: 8 -> 80"
+  },
+  {
+    "lang": "hi",
+    "original_en": "It costs 8 dollars.",
+    "correct_dubbed_hi": "Iska dam aath dollar hai.",
+    "wrong_dubbed_hi": "Iska dam assi dollar hai.",
+    "error_description": "number swap: 8 -> 80"
+  },
+  {
+    "lang": "hi",
+    "original_en": "I need 10 minutes.",
+    "correct_dubbed_hi": "Mujhe das minute chahiye.",
+    "wrong_dubbed_hi": "Mujhe sau minute chahiye.",
+    "error_description": "number swap: 10 -> 100"
+  },
+  {
+    "lang": "hi",
+    "original_en": "We have 10 people.",
+    "correct_dubbed_hi": "Hamare paas das log hain.",
+    "wrong_dubbed_hi": "Hamare paas sau log hain.",
+    "error_description": "number swap: 10 -> 100"
+  },
+  {
+    "lang": "hi",
+    "original_en": "It costs 10 dollars.",
+    "correct_dubbed_hi": "Iska dam das dollar hai.",
+    "wrong_dubbed_hi": "Iska dam sau dollar hai.",
+    "error_description": "number swap: 10 -> 100"
+  },
+  {
+    "lang": "hi",
+    "original_en": "I need 12 minutes.",
+    "correct_dubbed_hi": "Mujhe baarah minute chahiye.",
+    "wrong_dubbed_hi": "Mujhe ek sau bees minute chahiye.",
+    "error_description": "number swap: 12 -> 120"
+  },
+  {
+    "lang": "hi",
+    "original_en": "We have 12 people.",
+    "correct_dubbed_hi": "Hamare paas baarah log hain.",
+    "wrong_dubbed_hi": "Hamare paas ek sau bees log hain.",
+    "error_description": "number swap: 12 -> 120"
+  },
+  {
+    "lang": "hi",
+    "original_en": "It costs 12 dollars.",
+    "correct_dubbed_hi": "Iska dam baarah dollar hai.",
+    "wrong_dubbed_hi": "Iska dam ek sau bees dollar hai.",
+    "error_description": "number swap: 12 -> 120"
+  },
+  {
+    "lang": "hi",
+    "original_en": "He will arrive on Monday.",
+    "correct_dubbed_hi": "Woh somvaar ko aayega.",
+    "wrong_dubbed_hi": "Woh shukravaar ko aayega.",
+    "error_description": "day swap: Monday -> Friday"
+  },
+  {
+    "lang": "hi",
+    "original_en": "He will arrive on Tuesday.",
+    "correct_dubbed_hi": "Woh mangalvaar ko aayega.",
+    "wrong_dubbed_hi": "Woh guruvaar ko aayega.",
+    "error_description": "day swap: Tuesday -> Thursday"
+  },
+  {
+    "lang": "hi",
+    "original_en": "He will arrive on Wednesday.",
+    "correct_dubbed_hi": "Woh budhvaar ko aayega.",
+    "wrong_dubbed_hi": "Woh ravivaar ko aayega.",
+    "error_description": "day swap: Wednesday -> Sunday"
+  },
+  {
+    "lang": "hi",
+    "original_en": "I told Sarah.",
+    "correct_dubbed_hi": "Maine Sarah ko bataya.",
+    "wrong_dubbed_hi": "Maine Laura ko bataya.",
+    "error_description": "name swap: Sarah -> Laura"
+  },
+  {
+    "lang": "hi",
+    "original_en": "I told John.",
+    "correct_dubbed_hi": "Maine John ko bataya.",
+    "wrong_dubbed_hi": "Maine Mike ko bataya.",
+    "error_description": "name swap: John -> Mike"
+  },
+  {
+    "lang": "hi",
+    "original_en": "I told David.",
+    "correct_dubbed_hi": "Maine David ko bataya.",
+    "wrong_dubbed_hi": "Maine Daniel ko bataya.",
+    "error_description": "name swap: David -> Daniel"
+  },
+  {
+    "lang": "hi",
+    "original_en": "I need 2 minutes today.",
+    "correct_dubbed_hi": "Mujhe do minute chahiye.",
+    "wrong_dubbed_hi": "Mujhe bhees minute chahiye.",
+    "error_description": "number swap: 2 -> 20"
+  },
+  {
+    "lang": "hi",
+    "original_en": "I need 2 minutes today.",
+    "correct_dubbed_hi": "Mujhe do minute chahiye.",
+    "wrong_dubbed_hi": "Mujhe bhees minute chahiye.",
+    "error_description": "number swap: 2 -> 20"
+  },
+  {
+    "lang": "hi",
+    "original_en": "I need 2 minutes today.",
+    "correct_dubbed_hi": "Mujhe do minute chahiye.",
+    "wrong_dubbed_hi": "Mujhe bhees minute chahiye.",
+    "error_description": "number swap: 2 -> 20"
+  },
+  {
+    "lang": "hi",
+    "original_en": "I need 2 minutes today.",
+    "correct_dubbed_hi": "Mujhe do minute chahiye.",
+    "wrong_dubbed_hi": "Mujhe bhees minute chahiye.",
+    "error_description": "number swap: 2 -> 20"
+  },
+  {
+    "lang": "hi",
+    "original_en": "I need 2 minutes today.",
+    "correct_dubbed_hi": "Mujhe do minute chahiye.",
+    "wrong_dubbed_hi": "Mujhe bhees minute chahiye.",
+    "error_description": "number swap: 2 -> 20"
+  },
+  {
+    "lang": "hi",
+    "original_en": "I need 2 minutes today.",
+    "correct_dubbed_hi": "Mujhe do minute chahiye.",
+    "wrong_dubbed_hi": "Mujhe bhees minute chahiye.",
+    "error_description": "number swap: 2 -> 20"
+  },
+  {
+    "lang": "hi",
+    "original_en": "I need 2 minutes today.",
+    "correct_dubbed_hi": "Mujhe do minute chahiye.",
+    "wrong_dubbed_hi": "Mujhe bhees minute chahiye.",
+    "error_description": "number swap: 2 -> 20"
+  },
+  {
+    "lang": "hi",
+    "original_en": "I need 2 minutes today.",
+    "correct_dubbed_hi": "Mujhe do minute chahiye.",
+    "wrong_dubbed_hi": "Mujhe bhees minute chahiye.",
+    "error_description": "number swap: 2 -> 20"
+  },
+  {
+    "lang": "pt",
+    "original_en": "I need 2 minutes.",
+    "correct_dubbed_pt": "Preciso de dois minutos.",
+    "wrong_dubbed_pt": "Preciso de vinte minutos.",
+    "error_description": "number swap: 2 -> 20"
+  },
+  {
+    "lang": "pt",
+    "original_en": "We have 2 people.",
+    "correct_dubbed_pt": "Temos dois pessoas.",
+    "wrong_dubbed_pt": "Temos vinte pessoas.",
+    "error_description": "number swap: 2 -> 20"
+  },
+  {
+    "lang": "pt",
+    "original_en": "It costs 2 dollars.",
+    "correct_dubbed_pt": "Custa dois dólares.",
+    "wrong_dubbed_pt": "Custa vinte dólares.",
+    "error_description": "number swap: 2 -> 20"
+  },
+  {
+    "lang": "pt",
+    "original_en": "I need 3 minutes.",
+    "correct_dubbed_pt": "Preciso de três minutos.",
+    "wrong_dubbed_pt": "Preciso de treze minutos.",
+    "error_description": "number swap: 3 -> 13"
+  },
+  {
+    "lang": "pt",
+    "original_en": "We have 3 people.",
+    "correct_dubbed_pt": "Temos três pessoas.",
+    "wrong_dubbed_pt": "Temos treze pessoas.",
+    "error_description": "number swap: 3 -> 13"
+  },
+  {
+    "lang": "pt",
+    "original_en": "It costs 3 dollars.",
+    "correct_dubbed_pt": "Custa três dólares.",
+    "wrong_dubbed_pt": "Custa treze dólares.",
+    "error_description": "number swap: 3 -> 13"
+  },
+  {
+    "lang": "pt",
+    "original_en": "I need 4 minutes.",
+    "correct_dubbed_pt": "Preciso de quatro minutos.",
+    "wrong_dubbed_pt": "Preciso de quarenta minutos.",
+    "error_description": "number swap: 4 -> 40"
+  },
+  {
+    "lang": "pt",
+    "original_en": "We have 4 people.",
+    "correct_dubbed_pt": "Temos quatro pessoas.",
+    "wrong_dubbed_pt": "Temos quarenta pessoas.",
+    "error_description": "number swap: 4 -> 40"
+  },
+  {
+    "lang": "pt",
+    "original_en": "It costs 4 dollars.",
+    "correct_dubbed_pt": "Custa quatro dólares.",
+    "wrong_dubbed_pt": "Custa quarenta dólares.",
+    "error_description": "number swap: 4 -> 40"
+  },
+  {
+    "lang": "pt",
+    "original_en": "I need 5 minutes.",
+    "correct_dubbed_pt": "Preciso de cinco minutos.",
+    "wrong_dubbed_pt": "Preciso de cinquenta minutos.",
+    "error_description": "number swap: 5 -> 50"
+  },
+  {
+    "lang": "pt",
+    "original_en": "We have 5 people.",
+    "correct_dubbed_pt": "Temos cinco pessoas.",
+    "wrong_dubbed_pt": "Temos cinquenta pessoas.",
+    "error_description": "number swap: 5 -> 50"
+  },
+  {
+    "lang": "pt",
+    "original_en": "It costs 5 dollars.",
+    "correct_dubbed_pt": "Custa cinco dólares.",
+    "wrong_dubbed_pt": "Custa cinquenta dólares.",
+    "error_description": "number swap: 5 -> 50"
+  },
+  {
+    "lang": "pt",
+    "original_en": "I need 8 minutes.",
+    "correct_dubbed_pt": "Preciso de oito minutos.",
+    "wrong_dubbed_pt": "Preciso de oitenta minutos.",
+    "error_description": "number swap: 8 -> 80"
+  },
+  {
+    "lang": "pt",
+    "original_en": "We have 8 people.",
+    "correct_dubbed_pt": "Temos oito pessoas.",
+    "wrong_dubbed_pt": "Temos oitenta pessoas.",
+    "error_description": "number swap: 8 -> 80"
+  },
+  {
+    "lang": "pt",
+    "original_en": "It costs 8 dollars.",
+    "correct_dubbed_pt": "Custa oito dólares.",
+    "wrong_dubbed_pt": "Custa oitenta dólares.",
+    "error_description": "number swap: 8 -> 80"
+  },
+  {
+    "lang": "pt",
+    "original_en": "I need 10 minutes.",
+    "correct_dubbed_pt": "Preciso de dez minutos.",
+    "wrong_dubbed_pt": "Preciso de cem minutos.",
+    "error_description": "number swap: 10 -> 100"
+  },
+  {
+    "lang": "pt",
+    "original_en": "We have 10 people.",
+    "correct_dubbed_pt": "Temos dez pessoas.",
+    "wrong_dubbed_pt": "Temos cem pessoas.",
+    "error_description": "number swap: 10 -> 100"
+  },
+  {
+    "lang": "pt",
+    "original_en": "It costs 10 dollars.",
+    "correct_dubbed_pt": "Custa dez dólares.",
+    "wrong_dubbed_pt": "Custa cem dólares.",
+    "error_description": "number swap: 10 -> 100"
+  },
+  {
+    "lang": "pt",
+    "original_en": "I need 12 minutes.",
+    "correct_dubbed_pt": "Preciso de doze minutos.",
+    "wrong_dubbed_pt": "Preciso de cento e vinte minutos.",
+    "error_description": "number swap: 12 -> 120"
+  },
+  {
+    "lang": "pt",
+    "original_en": "We have 12 people.",
+    "correct_dubbed_pt": "Temos doze pessoas.",
+    "wrong_dubbed_pt": "Temos cento e vinte pessoas.",
+    "error_description": "number swap: 12 -> 120"
+  },
+  {
+    "lang": "pt",
+    "original_en": "It costs 12 dollars.",
+    "correct_dubbed_pt": "Custa doze dólares.",
+    "wrong_dubbed_pt": "Custa cento e vinte dólares.",
+    "error_description": "number swap: 12 -> 120"
+  },
+  {
+    "lang": "pt",
+    "original_en": "He will arrive on Monday.",
+    "correct_dubbed_pt": "Ele vai chegar na segunda-feira.",
+    "wrong_dubbed_pt": "Ele vai chegar na sexta-feira.",
+    "error_description": "day swap: Monday -> Friday"
+  },
+  {
+    "lang": "pt",
+    "original_en": "He will arrive on Tuesday.",
+    "correct_dubbed_pt": "Ele vai chegar na terça-feira.",
+    "wrong_dubbed_pt": "Ele vai chegar na quinta-feira.",
+    "error_description": "day swap: Tuesday -> Thursday"
+  },
+  {
+    "lang": "pt",
+    "original_en": "He will arrive on Wednesday.",
+    "correct_dubbed_pt": "Ele vai chegar na quarta-feira.",
+    "wrong_dubbed_pt": "Ele vai chegar na domingo.",
+    "error_description": "day swap: Wednesday -> Sunday"
+  },
+  {
+    "lang": "pt",
+    "original_en": "I told Sarah.",
+    "correct_dubbed_pt": "Eu contei para a Sarah.",
+    "wrong_dubbed_pt": "Eu contei para a Laura.",
+    "error_description": "name swap: Sarah -> Laura"
+  },
+  {
+    "lang": "pt",
+    "original_en": "I told John.",
+    "correct_dubbed_pt": "Eu contei para a John.",
+    "wrong_dubbed_pt": "Eu contei para a Mike.",
+    "error_description": "name swap: John -> Mike"
+  },
+  {
+    "lang": "pt",
+    "original_en": "I told David.",
+    "correct_dubbed_pt": "Eu contei para a David.",
+    "wrong_dubbed_pt": "Eu contei para a Daniel.",
+    "error_description": "name swap: David -> Daniel"
+  },
+  {
+    "lang": "pt",
+    "original_en": "I need 2 minutes today.",
+    "correct_dubbed_pt": "Preciso de dois minutos.",
+    "wrong_dubbed_pt": "Preciso de vinte minutos.",
+    "error_description": "number swap: 2 -> 20"
+  },
+  {
+    "lang": "pt",
+    "original_en": "I need 2 minutes today.",
+    "correct_dubbed_pt": "Preciso de dois minutos.",
+    "wrong_dubbed_pt": "Preciso de vinte minutos.",
+    "error_description": "number swap: 2 -> 20"
+  },
+  {
+    "lang": "pt",
+    "original_en": "I need 2 minutes today.",
+    "correct_dubbed_pt": "Preciso de dois minutos.",
+    "wrong_dubbed_pt": "Preciso de vinte minutos.",
+    "error_description": "number swap: 2 -> 20"
+  },
+  {
+    "lang": "pt",
+    "original_en": "I need 2 minutes today.",
+    "correct_dubbed_pt": "Preciso de dois minutos.",
+    "wrong_dubbed_pt": "Preciso de vinte minutos.",
+    "error_description": "number swap: 2 -> 20"
+  },
+  {
+    "lang": "pt",
+    "original_en": "I need 2 minutes today.",
+    "correct_dubbed_pt": "Preciso de dois minutos.",
+    "wrong_dubbed_pt": "Preciso de vinte minutos.",
+    "error_description": "number swap: 2 -> 20"
+  },
+  {
+    "lang": "pt",
+    "original_en": "I need 2 minutes today.",
+    "correct_dubbed_pt": "Preciso de dois minutos.",
+    "wrong_dubbed_pt": "Preciso de vinte minutos.",
+    "error_description": "number swap: 2 -> 20"
+  },
+  {
+    "lang": "pt",
+    "original_en": "I need 2 minutes today.",
+    "correct_dubbed_pt": "Preciso de dois minutos.",
+    "wrong_dubbed_pt": "Preciso de vinte minutos.",
+    "error_description": "number swap: 2 -> 20"
+  },
+  {
+    "lang": "pt",
+    "original_en": "I need 2 minutes today.",
+    "correct_dubbed_pt": "Preciso de dois minutos.",
+    "wrong_dubbed_pt": "Preciso de vinte minutos.",
+    "error_description": "number swap: 2 -> 20"
+  },
+  {
+    "lang": "es",
+    "original_en": "I need 2 minutes.",
+    "correct_dubbed_es_AR": "Necesito dos minutos.",
+    "wrong_dubbed_es_AR": "Necesito veinte minutos.",
+    "error_description": "number swap: 2 -> 20"
+  },
+  {
+    "lang": "es",
+    "original_en": "We have 2 people.",
+    "correct_dubbed_es_AR": "Tenemos dos personas.",
+    "wrong_dubbed_es_AR": "Tenemos veinte personas.",
+    "error_description": "number swap: 2 -> 20"
+  },
+  {
+    "lang": "es",
+    "original_en": "It costs 2 dollars.",
+    "correct_dubbed_es_AR": "Cuesta dos dólares.",
+    "wrong_dubbed_es_AR": "Cuesta veinte dólares.",
+    "error_description": "number swap: 2 -> 20"
+  },
+  {
+    "lang": "es",
+    "original_en": "I need 3 minutes.",
+    "correct_dubbed_es_AR": "Necesito tres minutos.",
+    "wrong_dubbed_es_AR": "Necesito trece minutos.",
+    "error_description": "number swap: 3 -> 13"
+  },
+  {
+    "lang": "es",
+    "original_en": "We have 3 people.",
+    "correct_dubbed_es_AR": "Tenemos tres personas.",
+    "wrong_dubbed_es_AR": "Tenemos trece personas.",
+    "error_description": "number swap: 3 -> 13"
+  },
+  {
+    "lang": "es",
+    "original_en": "It costs 3 dollars.",
+    "correct_dubbed_es_AR": "Cuesta tres dólares.",
+    "wrong_dubbed_es_AR": "Cuesta trece dólares.",
+    "error_description": "number swap: 3 -> 13"
+  },
+  {
+    "lang": "es",
+    "original_en": "I need 4 minutes.",
+    "correct_dubbed_es_AR": "Necesito cuatro minutos.",
+    "wrong_dubbed_es_AR": "Necesito cuarenta minutos.",
+    "error_description": "number swap: 4 -> 40"
+  },
+  {
+    "lang": "es",
+    "original_en": "We have 4 people.",
+    "correct_dubbed_es_AR": "Tenemos cuatro personas.",
+    "wrong_dubbed_es_AR": "Tenemos cuarenta personas.",
+    "error_description": "number swap: 4 -> 40"
+  },
+  {
+    "lang": "es",
+    "original_en": "It costs 4 dollars.",
+    "correct_dubbed_es_AR": "Cuesta cuatro dólares.",
+    "wrong_dubbed_es_AR": "Cuesta cuarenta dólares.",
+    "error_description": "number swap: 4 -> 40"
+  },
+  {
+    "lang": "es",
+    "original_en": "I need 5 minutes.",
+    "correct_dubbed_es_AR": "Necesito cinco minutos.",
+    "wrong_dubbed_es_AR": "Necesito cincuenta minutos.",
+    "error_description": "number swap: 5 -> 50"
+  },
+  {
+    "lang": "es",
+    "original_en": "We have 5 people.",
+    "correct_dubbed_es_AR": "Tenemos cinco personas.",
+    "wrong_dubbed_es_AR": "Tenemos cincuenta personas.",
+    "error_description": "number swap: 5 -> 50"
+  },
+  {
+    "lang": "es",
+    "original_en": "It costs 5 dollars.",
+    "correct_dubbed_es_AR": "Cuesta cinco dólares.",
+    "wrong_dubbed_es_AR": "Cuesta cincuenta dólares.",
+    "error_description": "number swap: 5 -> 50"
+  },
+  {
+    "lang": "es",
+    "original_en": "I need 8 minutes.",
+    "correct_dubbed_es_AR": "Necesito ocho minutos.",
+    "wrong_dubbed_es_AR": "Necesito ochenta minutos.",
+    "error_description": "number swap: 8 -> 80"
+  },
+  {
+    "lang": "es",
+    "original_en": "We have 8 people.",
+    "correct_dubbed_es_AR": "Tenemos ocho personas.",
+    "wrong_dubbed_es_AR": "Tenemos ochenta personas.",
+    "error_description": "number swap: 8 -> 80"
+  },
+  {
+    "lang": "es",
+    "original_en": "It costs 8 dollars.",
+    "correct_dubbed_es_AR": "Cuesta ocho dólares.",
+    "wrong_dubbed_es_AR": "Cuesta ochenta dólares.",
+    "error_description": "number swap: 8 -> 80"
+  },
+  {
+    "lang": "es",
+    "original_en": "I need 10 minutes.",
+    "correct_dubbed_es_AR": "Necesito diez minutos.",
+    "wrong_dubbed_es_AR": "Necesito cien minutos.",
+    "error_description": "number swap: 10 -> 100"
+  },
+  {
+    "lang": "es",
+    "original_en": "We have 10 people.",
+    "correct_dubbed_es_AR": "Tenemos diez personas.",
+    "wrong_dubbed_es_AR": "Tenemos cien personas.",
+    "error_description": "number swap: 10 -> 100"
+  },
+  {
+    "lang": "es",
+    "original_en": "It costs 10 dollars.",
+    "correct_dubbed_es_AR": "Cuesta diez dólares.",
+    "wrong_dubbed_es_AR": "Cuesta cien dólares.",
+    "error_description": "number swap: 10 -> 100"
+  },
+  {
+    "lang": "es",
+    "original_en": "I need 12 minutes.",
+    "correct_dubbed_es_AR": "Necesito doce minutos.",
+    "wrong_dubbed_es_AR": "Necesito ciento veinte minutos.",
+    "error_description": "number swap: 12 -> 120"
+  },
+  {
+    "lang": "es",
+    "original_en": "We have 12 people.",
+    "correct_dubbed_es_AR": "Tenemos doce personas.",
+    "wrong_dubbed_es_AR": "Tenemos ciento veinte personas.",
+    "error_description": "number swap: 12 -> 120"
+  },
+  {
+    "lang": "es",
+    "original_en": "It costs 12 dollars.",
+    "correct_dubbed_es_AR": "Cuesta doce dólares.",
+    "wrong_dubbed_es_AR": "Cuesta ciento veinte dólares.",
+    "error_description": "number swap: 12 -> 120"
+  },
+  {
+    "lang": "es",
+    "original_en": "He will arrive on Monday.",
+    "correct_dubbed_es_AR": "Él va a llegar el lunes.",
+    "wrong_dubbed_es_AR": "Él va a llegar el viernes.",
+    "error_description": "day swap: Monday -> Friday"
+  },
+  {
+    "lang": "es",
+    "original_en": "He will arrive on Tuesday.",
+    "correct_dubbed_es_AR": "Él va a llegar el martes.",
+    "wrong_dubbed_es_AR": "Él va a llegar el jueves.",
+    "error_description": "day swap: Tuesday -> Thursday"
+  },
+  {
+    "lang": "es",
+    "original_en": "He will arrive on Wednesday.",
+    "correct_dubbed_es_AR": "Él va a llegar el miércoles.",
+    "wrong_dubbed_es_AR": "Él va a llegar el domingo.",
+    "error_description": "day swap: Wednesday -> Sunday"
+  },
+  {
+    "lang": "es",
+    "original_en": "I told Sarah.",
+    "correct_dubbed_es_AR": "Le dije a Sarah.",
+    "wrong_dubbed_es_AR": "Le dije a Laura.",
+    "error_description": "name swap: Sarah -> Laura"
+  },
+  {
+    "lang": "es",
+    "original_en": "I told John.",
+    "correct_dubbed_es_AR": "Le dije a John.",
+    "wrong_dubbed_es_AR": "Le dije a Mike.",
+    "error_description": "name swap: John -> Mike"
+  },
+  {
+    "lang": "es",
+    "original_en": "I told David.",
+    "correct_dubbed_es_AR": "Le dije a David.",
+    "wrong_dubbed_es_AR": "Le dije a Daniel.",
+    "error_description": "name swap: David -> Daniel"
+  },
+  {
+    "lang": "es",
+    "original_en": "I need 2 minutes today.",
+    "correct_dubbed_es_AR": "Necesito dos minutos.",
+    "wrong_dubbed_es_AR": "Necesito veinte minutos.",
+    "error_description": "number swap: 2 -> 20"
+  },
+  {
+    "lang": "es",
+    "original_en": "I need 2 minutes today.",
+    "correct_dubbed_es_AR": "Necesito dos minutos.",
+    "wrong_dubbed_es_AR": "Necesito veinte minutos.",
+    "error_description": "number swap: 2 -> 20"
+  },
+  {
+    "lang": "es",
+    "original_en": "I need 2 minutes today.",
+    "correct_dubbed_es_AR": "Necesito dos minutos.",
+    "wrong_dubbed_es_AR": "Necesito veinte minutos.",
+    "error_description": "number swap: 2 -> 20"
+  }
+]

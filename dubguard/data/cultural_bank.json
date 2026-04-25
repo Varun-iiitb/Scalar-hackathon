@@ -1,0 +1,422 @@
+[
+  {
+    "lang": "hi",
+    "locale": "hi-IN",
+    "wrong_phrase": "As-salamu alaykum, mujhe gosht chahiye. 0",
+    "correct_phrase": "Namaste, mujhe meat chahiye.",
+    "rule": "Over-indexing on Urdu vocabulary for generic Hindi context."
+  },
+  {
+    "lang": "hi",
+    "locale": "hi-IN",
+    "wrong_phrase": "Bhaiyya, ek pindi chana bhaji pav dena. 1",
+    "correct_phrase": "Bhaiyya, ek pav bhaji dena.",
+    "rule": "Mixing regional terms confusingly; pav bhaji is standard."
+  },
+  {
+    "lang": "hi",
+    "locale": "hi-IN",
+    "wrong_phrase": "Woh ladka bilkul machcha jaisa lagta hai. 2",
+    "correct_phrase": "Woh ladka bahut sahi lagta hai.",
+    "rule": "'machcha' is South Indian/Dakhni slang."
+  },
+  {
+    "lang": "hi",
+    "locale": "hi-IN",
+    "wrong_phrase": "Zindagi tension nahi leni chahi dasta. 3",
+    "correct_phrase": "Zindagi tension nahi leni chahiye dosto.",
+    "rule": "dasta is dialetal mispronunciation for dosto."
+  },
+  {
+    "lang": "hi",
+    "locale": "hi-IN",
+    "wrong_phrase": "As-salamu alaykum, mujhe gosht chahiye. 4",
+    "correct_phrase": "Namaste, mujhe meat chahiye.",
+    "rule": "Over-indexing on Urdu vocabulary for generic Hindi context."
+  },
+  {
+    "lang": "hi",
+    "locale": "hi-IN",
+    "wrong_phrase": "Bhaiyya, ek pindi chana bhaji pav dena. 5",
+    "correct_phrase": "Bhaiyya, ek pav bhaji dena.",
+    "rule": "Mixing regional terms confusingly; pav bhaji is standard."
+  },
+  {
+    "lang": "hi",
+    "locale": "hi-IN",
+    "wrong_phrase": "Woh ladka bilkul machcha jaisa lagta hai. 6",
+    "correct_phrase": "Woh ladka bahut sahi lagta hai.",
+    "rule": "'machcha' is South Indian/Dakhni slang."
+  },
+  {
+    "lang": "hi",
+    "locale": "hi-IN",
+    "wrong_phrase": "Zindagi tension nahi leni chahi dasta. 7",
+    "correct_phrase": "Zindagi tension nahi leni chahiye dosto.",
+    "rule": "dasta is dialetal mispronunciation for dosto."
+  },
+  {
+    "lang": "hi",
+    "locale": "hi-IN",
+    "wrong_phrase": "As-salamu alaykum, mujhe gosht chahiye. 8",
+    "correct_phrase": "Namaste, mujhe meat chahiye.",
+    "rule": "Over-indexing on Urdu vocabulary for generic Hindi context."
+  },
+  {
+    "lang": "hi",
+    "locale": "hi-IN",
+    "wrong_phrase": "Bhaiyya, ek pindi chana bhaji pav dena. 9",
+    "correct_phrase": "Bhaiyya, ek pav bhaji dena.",
+    "rule": "Mixing regional terms confusingly; pav bhaji is standard."
+  },
+  {
+    "lang": "hi",
+    "locale": "hi-IN",
+    "wrong_phrase": "Woh ladka bilkul machcha jaisa lagta hai. 10",
+    "correct_phrase": "Woh ladka bahut sahi lagta hai.",
+    "rule": "'machcha' is South Indian/Dakhni slang."
+  },
+  {
+    "lang": "hi",
+    "locale": "hi-IN",
+    "wrong_phrase": "Zindagi tension nahi leni chahi dasta. 11",
+    "correct_phrase": "Zindagi tension nahi leni chahiye dosto.",
+    "rule": "dasta is dialetal mispronunciation for dosto."
+  },
+  {
+    "lang": "hi",
+    "locale": "hi-IN",
+    "wrong_phrase": "As-salamu alaykum, mujhe gosht chahiye. 12",
+    "correct_phrase": "Namaste, mujhe meat chahiye.",
+    "rule": "Over-indexing on Urdu vocabulary for generic Hindi context."
+  },
+  {
+    "lang": "hi",
+    "locale": "hi-IN",
+    "wrong_phrase": "Bhaiyya, ek pindi chana bhaji pav dena. 13",
+    "correct_phrase": "Bhaiyya, ek pav bhaji dena.",
+    "rule": "Mixing regional terms confusingly; pav bhaji is standard."
+  },
+  {
+    "lang": "hi",
+    "locale": "hi-IN",
+    "wrong_phrase": "Woh ladka bilkul machcha jaisa lagta hai. 14",
+    "correct_phrase": "Woh ladka bahut sahi lagta hai.",
+    "rule": "'machcha' is South Indian/Dakhni slang."
+  },
+  {
+    "lang": "hi",
+    "locale": "hi-IN",
+    "wrong_phrase": "Zindagi tension nahi leni chahi dasta. 15",
+    "correct_phrase": "Zindagi tension nahi leni chahiye dosto.",
+    "rule": "dasta is dialetal mispronunciation for dosto."
+  },
+  {
+    "lang": "hi",
+    "locale": "hi-IN",
+    "wrong_phrase": "As-salamu alaykum, mujhe gosht chahiye. 16",
+    "correct_phrase": "Namaste, mujhe meat chahiye.",
+    "rule": "Over-indexing on Urdu vocabulary for generic Hindi context."
+  },
+  {
+    "lang": "hi",
+    "locale": "hi-IN",
+    "wrong_phrase": "Bhaiyya, ek pindi chana bhaji pav dena. 17",
+    "correct_phrase": "Bhaiyya, ek pav bhaji dena.",
+    "rule": "Mixing regional terms confusingly; pav bhaji is standard."
+  },
+  {
+    "lang": "hi",
+    "locale": "hi-IN",
+    "wrong_phrase": "Woh ladka bilkul machcha jaisa lagta hai. 18",
+    "correct_phrase": "Woh ladka bahut sahi lagta hai.",
+    "rule": "'machcha' is South Indian/Dakhni slang."
+  },
+  {
+    "lang": "hi",
+    "locale": "hi-IN",
+    "wrong_phrase": "Zindagi tension nahi leni chahi dasta. 19",
+    "correct_phrase": "Zindagi tension nahi leni chahiye dosto.",
+    "rule": "dasta is dialetal mispronunciation for dosto."
+  },
+  {
+    "lang": "pt",
+    "locale": "pt-BR",
+    "wrong_phrase": "Estou fixando bué legal neste carro. 0",
+    "correct_phrase": "Estou achando muito legal esse carro.",
+    "rule": "Mixing European PT 'bué' or 'fixe' with Brazilian PT 'legal'."
+  },
+  {
+    "lang": "pt",
+    "locale": "pt-BR",
+    "wrong_phrase": "Meu, pega o comboio para a praia. 1",
+    "correct_phrase": "Cara, pega o trem pra praia.",
+    "rule": "Comboio is EU PT, Trem is BR PT."
+  },
+  {
+    "lang": "pt",
+    "locale": "pt-BR",
+    "wrong_phrase": "O gajo estava falando muita asneira. 2",
+    "correct_phrase": "O cara tava falando muita besteira.",
+    "rule": "Gajo is EU slang, cara is BR slang."
+  },
+  {
+    "lang": "pt",
+    "locale": "pt-BR",
+    "wrong_phrase": "Vou ao talho comprar carne. 3",
+    "correct_phrase": "Vou no açougue comprar carne.",
+    "rule": "Talho is EU PT, Açougue is BR PT."
+  },
+  {
+    "lang": "pt",
+    "locale": "pt-BR",
+    "wrong_phrase": "Estou fixando bué legal neste carro. 4",
+    "correct_phrase": "Estou achando muito legal esse carro.",
+    "rule": "Mixing European PT 'bué' or 'fixe' with Brazilian PT 'legal'."
+  },
+  {
+    "lang": "pt",
+    "locale": "pt-BR",
+    "wrong_phrase": "Meu, pega o comboio para a praia. 5",
+    "correct_phrase": "Cara, pega o trem pra praia.",
+    "rule": "Comboio is EU PT, Trem is BR PT."
+  },
+  {
+    "lang": "pt",
+    "locale": "pt-BR",
+    "wrong_phrase": "O gajo estava falando muita asneira. 6",
+    "correct_phrase": "O cara tava falando muita besteira.",
+    "rule": "Gajo is EU slang, cara is BR slang."
+  },
+  {
+    "lang": "pt",
+    "locale": "pt-BR",
+    "wrong_phrase": "Vou ao talho comprar carne. 7",
+    "correct_phrase": "Vou no açougue comprar carne.",
+    "rule": "Talho is EU PT, Açougue is BR PT."
+  },
+  {
+    "lang": "pt",
+    "locale": "pt-BR",
+    "wrong_phrase": "Estou fixando bué legal neste carro. 8",
+    "correct_phrase": "Estou achando muito legal esse carro.",
+    "rule": "Mixing European PT 'bué' or 'fixe' with Brazilian PT 'legal'."
+  },
+  {
+    "lang": "pt",
+    "locale": "pt-BR",
+    "wrong_phrase": "Meu, pega o comboio para a praia. 9",
+    "correct_phrase": "Cara, pega o trem pra praia.",
+    "rule": "Comboio is EU PT, Trem is BR PT."
+  },
+  {
+    "lang": "pt",
+    "locale": "pt-BR",
+    "wrong_phrase": "O gajo estava falando muita asneira. 10",
+    "correct_phrase": "O cara tava falando muita besteira.",
+    "rule": "Gajo is EU slang, cara is BR slang."
+  },
+  {
+    "lang": "pt",
+    "locale": "pt-BR",
+    "wrong_phrase": "Vou ao talho comprar carne. 11",
+    "correct_phrase": "Vou no açougue comprar carne.",
+    "rule": "Talho is EU PT, Açougue is BR PT."
+  },
+  {
+    "lang": "pt",
+    "locale": "pt-BR",
+    "wrong_phrase": "Estou fixando bué legal neste carro. 12",
+    "correct_phrase": "Estou achando muito legal esse carro.",
+    "rule": "Mixing European PT 'bué' or 'fixe' with Brazilian PT 'legal'."
+  },
+  {
+    "lang": "pt",
+    "locale": "pt-BR",
+    "wrong_phrase": "Meu, pega o comboio para a praia. 13",
+    "correct_phrase": "Cara, pega o trem pra praia.",
+    "rule": "Comboio is EU PT, Trem is BR PT."
+  },
+  {
+    "lang": "pt",
+    "locale": "pt-BR",
+    "wrong_phrase": "O gajo estava falando muita asneira. 14",
+    "correct_phrase": "O cara tava falando muita besteira.",
+    "rule": "Gajo is EU slang, cara is BR slang."
+  },
+  {
+    "lang": "pt",
+    "locale": "pt-BR",
+    "wrong_phrase": "Vou ao talho comprar carne. 15",
+    "correct_phrase": "Vou no açougue comprar carne.",
+    "rule": "Talho is EU PT, Açougue is BR PT."
+  },
+  {
+    "lang": "pt",
+    "locale": "pt-BR",
+    "wrong_phrase": "Estou fixando bué legal neste carro. 16",
+    "correct_phrase": "Estou achando muito legal esse carro.",
+    "rule": "Mixing European PT 'bué' or 'fixe' with Brazilian PT 'legal'."
+  },
+  {
+    "lang": "pt",
+    "locale": "pt-BR",
+    "wrong_phrase": "Meu, pega o comboio para a praia. 17",
+    "correct_phrase": "Cara, pega o trem pra praia.",
+    "rule": "Comboio is EU PT, Trem is BR PT."
+  },
+  {
+    "lang": "pt",
+    "locale": "pt-BR",
+    "wrong_phrase": "O gajo estava falando muita asneira. 18",
+    "correct_phrase": "O cara tava falando muita besteira.",
+    "rule": "Gajo is EU slang, cara is BR slang."
+  },
+  {
+    "lang": "pt",
+    "locale": "pt-BR",
+    "wrong_phrase": "Vou ao talho comprar carne. 19",
+    "correct_phrase": "Vou no açougue comprar carne.",
+    "rule": "Talho is EU PT, Açougue is BR PT."
+  },
+  {
+    "lang": "es",
+    "locale": "es-AR",
+    "wrong_phrase": "Oye tú, ¿qué pasa güey? 0",
+    "correct_phrase": "Che vos, ¿qué pasa?",
+    "rule": "güey is Mexican slang, not Argentine."
+  },
+  {
+    "lang": "es",
+    "locale": "es-AR",
+    "wrong_phrase": "Esa fiesta estuvo muy bacana. 1",
+    "correct_phrase": "Esa fiesta estuvo re piola.",
+    "rule": "bacana is Colombian/Caribbean, piola is Argentine."
+  },
+  {
+    "lang": "es",
+    "locale": "es-AR",
+    "wrong_phrase": "¡Qué guay está este carro! 2",
+    "correct_phrase": "¡Qué bueno está este auto!",
+    "rule": "guay is Spain, carro is Caribbean/Mexican, auto is Argentine."
+  },
+  {
+    "lang": "es",
+    "locale": "es-AR",
+    "wrong_phrase": "Tranquilo mano, todo va a salir bien. 3",
+    "correct_phrase": "Tranquilo chabón, todo va a salir bien.",
+    "rule": "mano is Caribbean/Portuñol, chabón is Argentine."
+  },
+  {
+    "lang": "es",
+    "locale": "es-AR",
+    "wrong_phrase": "Oye tú, ¿qué pasa güey? 4",
+    "correct_phrase": "Che vos, ¿qué pasa?",
+    "rule": "güey is Mexican slang, not Argentine."
+  },
+  {
+    "lang": "es",
+    "locale": "es-AR",
+    "wrong_phrase": "Esa fiesta estuvo muy bacana. 5",
+    "correct_phrase": "Esa fiesta estuvo re piola.",
+    "rule": "bacana is Colombian/Caribbean, piola is Argentine."
+  },
+  {
+    "lang": "es",
+    "locale": "es-AR",
+    "wrong_phrase": "¡Qué guay está este carro! 6",
+    "correct_phrase": "¡Qué bueno está este auto!",
+    "rule": "guay is Spain, carro is Caribbean/Mexican, auto is Argentine."
+  },
+  {
+    "lang": "es",
+    "locale": "es-AR",
+    "wrong_phrase": "Tranquilo mano, todo va a salir bien. 7",
+    "correct_phrase": "Tranquilo chabón, todo va a salir bien.",
+    "rule": "mano is Caribbean/Portuñol, chabón is Argentine."
+  },
+  {
+    "lang": "es",
+    "locale": "es-AR",
+    "wrong_phrase": "Oye tú, ¿qué pasa güey? 8",
+    "correct_phrase": "Che vos, ¿qué pasa?",
+    "rule": "güey is Mexican slang, not Argentine."
+  },
+  {
+    "lang": "es",
+    "locale": "es-AR",
+    "wrong_phrase": "Esa fiesta estuvo muy bacana. 9",
+    "correct_phrase": "Esa fiesta estuvo re piola.",
+    "rule": "bacana is Colombian/Caribbean, piola is Argentine."
+  },
+  {
+    "lang": "es",
+    "locale": "es-AR",
+    "wrong_phrase": "¡Qué guay está este carro! 10",
+    "correct_phrase": "¡Qué bueno está este auto!",
+    "rule": "guay is Spain, carro is Caribbean/Mexican, auto is Argentine."
+  },
+  {
+    "lang": "es",
+    "locale": "es-AR",
+    "wrong_phrase": "Tranquilo mano, todo va a salir bien. 11",
+    "correct_phrase": "Tranquilo chabón, todo va a salir bien.",
+    "rule": "mano is Caribbean/Portuñol, chabón is Argentine."
+  },
+  {
+    "lang": "es",
+    "locale": "es-AR",
+    "wrong_phrase": "Oye tú, ¿qué pasa güey? 12",
+    "correct_phrase": "Che vos, ¿qué pasa?",
+    "rule": "güey is Mexican slang, not Argentine."
+  },
+  {
+    "lang": "es",
+    "locale": "es-AR",
+    "wrong_phrase": "Esa fiesta estuvo muy bacana. 13",
+    "correct_phrase": "Esa fiesta estuvo re piola.",
+    "rule": "bacana is Colombian/Caribbean, piola is Argentine."
+  },
+  {
+    "lang": "es",
+    "locale": "es-AR",
+    "wrong_phrase": "¡Qué guay está este carro! 14",
+    "correct_phrase": "¡Qué bueno está este auto!",
+    "rule": "guay is Spain, carro is Caribbean/Mexican, auto is Argentine."
+  },
+  {
+    "lang": "es",
+    "locale": "es-AR",
+    "wrong_phrase": "Tranquilo mano, todo va a salir bien. 15",
+    "correct_phrase": "Tranquilo chabón, todo va a salir bien.",
+    "rule": "mano is Caribbean/Portuñol, chabón is Argentine."
+  },
+  {
+    "lang": "es",
+    "locale": "es-AR",
+    "wrong_phrase": "Oye tú, ¿qué pasa güey? 16",
+    "correct_phrase": "Che vos, ¿qué pasa?",
+    "rule": "güey is Mexican slang, not Argentine."
+  },
+  {
+    "lang": "es",
+    "locale": "es-AR",
+    "wrong_phrase": "Esa fiesta estuvo muy bacana. 17",
+    "correct_phrase": "Esa fiesta estuvo re piola.",
+    "rule": "bacana is Colombian/Caribbean, piola is Argentine."
+  },
+  {
+    "lang": "es",
+    "locale": "es-AR",
+    "wrong_phrase": "¡Qué guay está este carro! 18",
+    "correct_phrase": "¡Qué bueno está este auto!",
+    "rule": "guay is Spain, carro is Caribbean/Mexican, auto is Argentine."
+  },
+  {
+    "lang": "es",
+    "locale": "es-AR",
+    "wrong_phrase": "Tranquilo mano, todo va a salir bien. 19",
+    "correct_phrase": "Tranquilo chabón, todo va a salir bien.",
+    "rule": "mano is Caribbean/Portuñol, chabón is Argentine."
+  }
+]

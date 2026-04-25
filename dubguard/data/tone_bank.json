@@ -1,0 +1,562 @@
+[
+  {
+    "lang": "hi",
+    "original_en": "Hey buddy, what's up? [0]",
+    "original_register": "casual",
+    "correct_tone_hi": "Aur bhai, kya chal raha hai?",
+    "wrong_tone_hi": "Namaskar mahoashay, aapka din kaisa vyateet ho raha hai?"
+  },
+  {
+    "lang": "hi",
+    "original_en": "I respectfully disagree, sir. [1]",
+    "original_register": "formal",
+    "correct_tone_hi": "Mahoday, main prastav se asahmat hoon.",
+    "wrong_tone_hi": "Abe yaar, bakwas idea hai tera."
+  },
+  {
+    "lang": "hi",
+    "original_en": "Grab me a beer. [2]",
+    "original_register": "casual",
+    "correct_tone_hi": "Ek beer pakda dena yaar.",
+    "wrong_tone_hi": "Madira ka bartan pradan karein."
+  },
+  {
+    "lang": "hi",
+    "original_en": "The board requests your presence. [3]",
+    "original_register": "formal",
+    "correct_tone_hi": "Nideshak mandal upasthiti chahta hai.",
+    "wrong_tone_hi": "Director log bula rahe hain."
+  },
+  {
+    "lang": "hi",
+    "original_en": "This party is gonna be lit! [4]",
+    "original_register": "excited",
+    "correct_tone_hi": "Party mein bahut mazza aayega yaar!",
+    "wrong_tone_hi": "Yeh aayojan vidhivat sampann hoga."
+  },
+  {
+    "lang": "hi",
+    "original_en": "Don't sweat it, dude. [5]",
+    "original_register": "casual",
+    "correct_tone_hi": "Tension mat le, bhai.",
+    "wrong_tone_hi": "Is vishay par chinta karna uchit nahi hai."
+  },
+  {
+    "lang": "hi",
+    "original_en": "Hey buddy, what's up? [6]",
+    "original_register": "casual",
+    "correct_tone_hi": "Aur bhai, kya chal raha hai?",
+    "wrong_tone_hi": "Namaskar mahoashay, aapka din kaisa vyateet ho raha hai?"
+  },
+  {
+    "lang": "hi",
+    "original_en": "I respectfully disagree, sir. [7]",
+    "original_register": "formal",
+    "correct_tone_hi": "Mahoday, main prastav se asahmat hoon.",
+    "wrong_tone_hi": "Abe yaar, bakwas idea hai tera."
+  },
+  {
+    "lang": "hi",
+    "original_en": "Grab me a beer. [8]",
+    "original_register": "casual",
+    "correct_tone_hi": "Ek beer pakda dena yaar.",
+    "wrong_tone_hi": "Madira ka bartan pradan karein."
+  },
+  {
+    "lang": "hi",
+    "original_en": "The board requests your presence. [9]",
+    "original_register": "formal",
+    "correct_tone_hi": "Nideshak mandal upasthiti chahta hai.",
+    "wrong_tone_hi": "Director log bula rahe hain."
+  },
+  {
+    "lang": "hi",
+    "original_en": "This party is gonna be lit! [10]",
+    "original_register": "excited",
+    "correct_tone_hi": "Party mein bahut mazza aayega yaar!",
+    "wrong_tone_hi": "Yeh aayojan vidhivat sampann hoga."
+  },
+  {
+    "lang": "hi",
+    "original_en": "Don't sweat it, dude. [11]",
+    "original_register": "casual",
+    "correct_tone_hi": "Tension mat le, bhai.",
+    "wrong_tone_hi": "Is vishay par chinta karna uchit nahi hai."
+  },
+  {
+    "lang": "hi",
+    "original_en": "Hey buddy, what's up? [12]",
+    "original_register": "casual",
+    "correct_tone_hi": "Aur bhai, kya chal raha hai?",
+    "wrong_tone_hi": "Namaskar mahoashay, aapka din kaisa vyateet ho raha hai?"
+  },
+  {
+    "lang": "hi",
+    "original_en": "I respectfully disagree, sir. [13]",
+    "original_register": "formal",
+    "correct_tone_hi": "Mahoday, main prastav se asahmat hoon.",
+    "wrong_tone_hi": "Abe yaar, bakwas idea hai tera."
+  },
+  {
+    "lang": "hi",
+    "original_en": "Grab me a beer. [14]",
+    "original_register": "casual",
+    "correct_tone_hi": "Ek beer pakda dena yaar.",
+    "wrong_tone_hi": "Madira ka bartan pradan karein."
+  },
+  {
+    "lang": "hi",
+    "original_en": "The board requests your presence. [15]",
+    "original_register": "formal",
+    "correct_tone_hi": "Nideshak mandal upasthiti chahta hai.",
+    "wrong_tone_hi": "Director log bula rahe hain."
+  },
+  {
+    "lang": "hi",
+    "original_en": "This party is gonna be lit! [16]",
+    "original_register": "excited",
+    "correct_tone_hi": "Party mein bahut mazza aayega yaar!",
+    "wrong_tone_hi": "Yeh aayojan vidhivat sampann hoga."
+  },
+  {
+    "lang": "hi",
+    "original_en": "Don't sweat it, dude. [17]",
+    "original_register": "casual",
+    "correct_tone_hi": "Tension mat le, bhai.",
+    "wrong_tone_hi": "Is vishay par chinta karna uchit nahi hai."
+  },
+  {
+    "lang": "hi",
+    "original_en": "Hey buddy, what's up? [18]",
+    "original_register": "casual",
+    "correct_tone_hi": "Aur bhai, kya chal raha hai?",
+    "wrong_tone_hi": "Namaskar mahoashay, aapka din kaisa vyateet ho raha hai?"
+  },
+  {
+    "lang": "hi",
+    "original_en": "I respectfully disagree, sir. [19]",
+    "original_register": "formal",
+    "correct_tone_hi": "Mahoday, main prastav se asahmat hoon.",
+    "wrong_tone_hi": "Abe yaar, bakwas idea hai tera."
+  },
+  {
+    "lang": "hi",
+    "original_en": "Grab me a beer. [20]",
+    "original_register": "casual",
+    "correct_tone_hi": "Ek beer pakda dena yaar.",
+    "wrong_tone_hi": "Madira ka bartan pradan karein."
+  },
+  {
+    "lang": "hi",
+    "original_en": "The board requests your presence. [21]",
+    "original_register": "formal",
+    "correct_tone_hi": "Nideshak mandal upasthiti chahta hai.",
+    "wrong_tone_hi": "Director log bula rahe hain."
+  },
+  {
+    "lang": "hi",
+    "original_en": "This party is gonna be lit! [22]",
+    "original_register": "excited",
+    "correct_tone_hi": "Party mein bahut mazza aayega yaar!",
+    "wrong_tone_hi": "Yeh aayojan vidhivat sampann hoga."
+  },
+  {
+    "lang": "hi",
+    "original_en": "Don't sweat it, dude. [23]",
+    "original_register": "casual",
+    "correct_tone_hi": "Tension mat le, bhai.",
+    "wrong_tone_hi": "Is vishay par chinta karna uchit nahi hai."
+  },
+  {
+    "lang": "hi",
+    "original_en": "Hey buddy, what's up? [24]",
+    "original_register": "casual",
+    "correct_tone_hi": "Aur bhai, kya chal raha hai?",
+    "wrong_tone_hi": "Namaskar mahoashay, aapka din kaisa vyateet ho raha hai?"
+  },
+  {
+    "lang": "hi",
+    "original_en": "I respectfully disagree, sir. [25]",
+    "original_register": "formal",
+    "correct_tone_hi": "Mahoday, main prastav se asahmat hoon.",
+    "wrong_tone_hi": "Abe yaar, bakwas idea hai tera."
+  },
+  {
+    "lang": "hi",
+    "original_en": "Grab me a beer. [26]",
+    "original_register": "casual",
+    "correct_tone_hi": "Ek beer pakda dena yaar.",
+    "wrong_tone_hi": "Madira ka bartan pradan karein."
+  },
+  {
+    "lang": "hi",
+    "original_en": "The board requests your presence. [27]",
+    "original_register": "formal",
+    "correct_tone_hi": "Nideshak mandal upasthiti chahta hai.",
+    "wrong_tone_hi": "Director log bula rahe hain."
+  },
+  {
+    "lang": "hi",
+    "original_en": "This party is gonna be lit! [28]",
+    "original_register": "excited",
+    "correct_tone_hi": "Party mein bahut mazza aayega yaar!",
+    "wrong_tone_hi": "Yeh aayojan vidhivat sampann hoga."
+  },
+  {
+    "lang": "hi",
+    "original_en": "Don't sweat it, dude. [29]",
+    "original_register": "casual",
+    "correct_tone_hi": "Tension mat le, bhai.",
+    "wrong_tone_hi": "Is vishay par chinta karna uchit nahi hai."
+  },
+  {
+    "lang": "pt",
+    "original_en": "Hey buddy, what's up? [0]",
+    "original_register": "casual",
+    "correct_tone_pt": "E aí cara, tudo bem?",
+    "wrong_tone_pt": "Saudações, ilustre senhor, como tem passado?"
+  },
+  {
+    "lang": "pt",
+    "original_en": "I respectfully disagree, sir. [1]",
+    "original_register": "formal",
+    "correct_tone_pt": "Respeitosamente discordo, senhor.",
+    "wrong_tone_pt": "Qual é, isso não tem nada a ver."
+  },
+  {
+    "lang": "pt",
+    "original_en": "Grab me a beer. [2]",
+    "original_register": "casual",
+    "correct_tone_pt": "Pega uma cerveja pra mim.",
+    "wrong_tone_pt": "Poderia por gentileza alcançar-me uma bebida?"
+  },
+  {
+    "lang": "pt",
+    "original_en": "The board requests your presence. [3]",
+    "original_register": "formal",
+    "correct_tone_pt": "A diretoria solicita sua presença.",
+    "wrong_tone_pt": "Os chefões tão te chamando lá."
+  },
+  {
+    "lang": "pt",
+    "original_en": "This party is gonna be lit! [4]",
+    "original_register": "excited",
+    "correct_tone_pt": "Essa festa vai ser muito louca!",
+    "wrong_tone_pt": "Esta celebração será notável."
+  },
+  {
+    "lang": "pt",
+    "original_en": "Hey buddy, what's up? [5]",
+    "original_register": "casual",
+    "correct_tone_pt": "E aí cara, tudo bem?",
+    "wrong_tone_pt": "Saudações, ilustre senhor, como tem passado?"
+  },
+  {
+    "lang": "pt",
+    "original_en": "I respectfully disagree, sir. [6]",
+    "original_register": "formal",
+    "correct_tone_pt": "Respeitosamente discordo, senhor.",
+    "wrong_tone_pt": "Qual é, isso não tem nada a ver."
+  },
+  {
+    "lang": "pt",
+    "original_en": "Grab me a beer. [7]",
+    "original_register": "casual",
+    "correct_tone_pt": "Pega uma cerveja pra mim.",
+    "wrong_tone_pt": "Poderia por gentileza alcançar-me uma bebida?"
+  },
+  {
+    "lang": "pt",
+    "original_en": "The board requests your presence. [8]",
+    "original_register": "formal",
+    "correct_tone_pt": "A diretoria solicita sua presença.",
+    "wrong_tone_pt": "Os chefões tão te chamando lá."
+  },
+  {
+    "lang": "pt",
+    "original_en": "This party is gonna be lit! [9]",
+    "original_register": "excited",
+    "correct_tone_pt": "Essa festa vai ser muito louca!",
+    "wrong_tone_pt": "Esta celebração será notável."
+  },
+  {
+    "lang": "pt",
+    "original_en": "Hey buddy, what's up? [10]",
+    "original_register": "casual",
+    "correct_tone_pt": "E aí cara, tudo bem?",
+    "wrong_tone_pt": "Saudações, ilustre senhor, como tem passado?"
+  },
+  {
+    "lang": "pt",
+    "original_en": "I respectfully disagree, sir. [11]",
+    "original_register": "formal",
+    "correct_tone_pt": "Respeitosamente discordo, senhor.",
+    "wrong_tone_pt": "Qual é, isso não tem nada a ver."
+  },
+  {
+    "lang": "pt",
+    "original_en": "Grab me a beer. [12]",
+    "original_register": "casual",
+    "correct_tone_pt": "Pega uma cerveja pra mim.",
+    "wrong_tone_pt": "Poderia por gentileza alcançar-me uma bebida?"
+  },
+  {
+    "lang": "pt",
+    "original_en": "The board requests your presence. [13]",
+    "original_register": "formal",
+    "correct_tone_pt": "A diretoria solicita sua presença.",
+    "wrong_tone_pt": "Os chefões tão te chamando lá."
+  },
+  {
+    "lang": "pt",
+    "original_en": "This party is gonna be lit! [14]",
+    "original_register": "excited",
+    "correct_tone_pt": "Essa festa vai ser muito louca!",
+    "wrong_tone_pt": "Esta celebração será notável."
+  },
+  {
+    "lang": "pt",
+    "original_en": "Hey buddy, what's up? [15]",
+    "original_register": "casual",
+    "correct_tone_pt": "E aí cara, tudo bem?",
+    "wrong_tone_pt": "Saudações, ilustre senhor, como tem passado?"
+  },
+  {
+    "lang": "pt",
+    "original_en": "I respectfully disagree, sir. [16]",
+    "original_register": "formal",
+    "correct_tone_pt": "Respeitosamente discordo, senhor.",
+    "wrong_tone_pt": "Qual é, isso não tem nada a ver."
+  },
+  {
+    "lang": "pt",
+    "original_en": "Grab me a beer. [17]",
+    "original_register": "casual",
+    "correct_tone_pt": "Pega uma cerveja pra mim.",
+    "wrong_tone_pt": "Poderia por gentileza alcançar-me uma bebida?"
+  },
+  {
+    "lang": "pt",
+    "original_en": "The board requests your presence. [18]",
+    "original_register": "formal",
+    "correct_tone_pt": "A diretoria solicita sua presença.",
+    "wrong_tone_pt": "Os chefões tão te chamando lá."
+  },
+  {
+    "lang": "pt",
+    "original_en": "This party is gonna be lit! [19]",
+    "original_register": "excited",
+    "correct_tone_pt": "Essa festa vai ser muito louca!",
+    "wrong_tone_pt": "Esta celebração será notável."
+  },
+  {
+    "lang": "pt",
+    "original_en": "Hey buddy, what's up? [20]",
+    "original_register": "casual",
+    "correct_tone_pt": "E aí cara, tudo bem?",
+    "wrong_tone_pt": "Saudações, ilustre senhor, como tem passado?"
+  },
+  {
+    "lang": "pt",
+    "original_en": "I respectfully disagree, sir. [21]",
+    "original_register": "formal",
+    "correct_tone_pt": "Respeitosamente discordo, senhor.",
+    "wrong_tone_pt": "Qual é, isso não tem nada a ver."
+  },
+  {
+    "lang": "pt",
+    "original_en": "Grab me a beer. [22]",
+    "original_register": "casual",
+    "correct_tone_pt": "Pega uma cerveja pra mim.",
+    "wrong_tone_pt": "Poderia por gentileza alcançar-me uma bebida?"
+  },
+  {
+    "lang": "pt",
+    "original_en": "The board requests your presence. [23]",
+    "original_register": "formal",
+    "correct_tone_pt": "A diretoria solicita sua presença.",
+    "wrong_tone_pt": "Os chefões tão te chamando lá."
+  },
+  {
+    "lang": "pt",
+    "original_en": "This party is gonna be lit! [24]",
+    "original_register": "excited",
+    "correct_tone_pt": "Essa festa vai ser muito louca!",
+    "wrong_tone_pt": "Esta celebração será notável."
+  },
+  {
+    "lang": "es",
+    "original_en": "Hey buddy, what's up? [0]",
+    "original_register": "casual",
+    "correct_tone_es": "Che, ¿cómo andás?",
+    "wrong_tone_es": "Buenos días, estimado señor."
+  },
+  {
+    "lang": "es",
+    "original_en": "I respectfully disagree, sir. [1]",
+    "original_register": "formal",
+    "correct_tone_es": "Respetuosamente difiero, señor.",
+    "wrong_tone_es": "Che viejo, cualquiera lo que decís."
+  },
+  {
+    "lang": "es",
+    "original_en": "Grab me a beer. [2]",
+    "original_register": "casual",
+    "correct_tone_es": "Pasame una birra, dale?",
+    "wrong_tone_es": "Tenga la amabilidad de alcanzarme una cerveza."
+  },
+  {
+    "lang": "es",
+    "original_en": "The board requests your presence. [3]",
+    "original_register": "formal",
+    "correct_tone_es": "El directorio solicita su presencia.",
+    "wrong_tone_es": "Los jefes te dicen que vengas un toque."
+  },
+  {
+    "lang": "es",
+    "original_en": "This party is gonna be lit! [4]",
+    "original_register": "excited",
+    "correct_tone_es": "¡Esta joda va a estar re piola!",
+    "wrong_tone_es": "Esta celebración será sumamente entretenida."
+  },
+  {
+    "lang": "es",
+    "original_en": "Hey buddy, what's up? [5]",
+    "original_register": "casual",
+    "correct_tone_es": "Che, ¿cómo andás?",
+    "wrong_tone_es": "Buenos días, estimado señor."
+  },
+  {
+    "lang": "es",
+    "original_en": "I respectfully disagree, sir. [6]",
+    "original_register": "formal",
+    "correct_tone_es": "Respetuosamente difiero, señor.",
+    "wrong_tone_es": "Che viejo, cualquiera lo que decís."
+  },
+  {
+    "lang": "es",
+    "original_en": "Grab me a beer. [7]",
+    "original_register": "casual",
+    "correct_tone_es": "Pasame una birra, dale?",
+    "wrong_tone_es": "Tenga la amabilidad de alcanzarme una cerveza."
+  },
+  {
+    "lang": "es",
+    "original_en": "The board requests your presence. [8]",
+    "original_register": "formal",
+    "correct_tone_es": "El directorio solicita su presencia.",
+    "wrong_tone_es": "Los jefes te dicen que vengas un toque."
+  },
+  {
+    "lang": "es",
+    "original_en": "This party is gonna be lit! [9]",
+    "original_register": "excited",
+    "correct_tone_es": "¡Esta joda va a estar re piola!",
+    "wrong_tone_es": "Esta celebración será sumamente entretenida."
+  },
+  {
+    "lang": "es",
+    "original_en": "Hey buddy, what's up? [10]",
+    "original_register": "casual",
+    "correct_tone_es": "Che, ¿cómo andás?",
+    "wrong_tone_es": "Buenos días, estimado señor."
+  },
+  {
+    "lang": "es",
+    "original_en": "I respectfully disagree, sir. [11]",
+    "original_register": "formal",
+    "correct_tone_es": "Respetuosamente difiero, señor.",
+    "wrong_tone_es": "Che viejo, cualquiera lo que decís."
+  },
+  {
+    "lang": "es",
+    "original_en": "Grab me a beer. [12]",
+    "original_register": "casual",
+    "correct_tone_es": "Pasame una birra, dale?",
+    "wrong_tone_es": "Tenga la amabilidad de alcanzarme una cerveza."
+  },
+  {
+    "lang": "es",
+    "original_en": "The board requests your presence. [13]",
+    "original_register": "formal",
+    "correct_tone_es": "El directorio solicita su presencia.",
+    "wrong_tone_es": "Los jefes te dicen que vengas un toque."
+  },
+  {
+    "lang": "es",
+    "original_en": "This party is gonna be lit! [14]",
+    "original_register": "excited",
+    "correct_tone_es": "¡Esta joda va a estar re piola!",
+    "wrong_tone_es": "Esta celebración será sumamente entretenida."
+  },
+  {
+    "lang": "es",
+    "original_en": "Hey buddy, what's up? [15]",
+    "original_register": "casual",
+    "correct_tone_es": "Che, ¿cómo andás?",
+    "wrong_tone_es": "Buenos días, estimado señor."
+  },
+  {
+    "lang": "es",
+    "original_en": "I respectfully disagree, sir. [16]",
+    "original_register": "formal",
+    "correct_tone_es": "Respetuosamente difiero, señor.",
+    "wrong_tone_es": "Che viejo, cualquiera lo que decís."
+  },
+  {
+    "lang": "es",
+    "original_en": "Grab me a beer. [17]",
+    "original_register": "casual",
+    "correct_tone_es": "Pasame una birra, dale?",
+    "wrong_tone_es": "Tenga la amabilidad de alcanzarme una cerveza."
+  },
+  {
+    "lang": "es",
+    "original_en": "The board requests your presence. [18]",
+    "original_register": "formal",
+    "correct_tone_es": "El directorio solicita su presencia.",
+    "wrong_tone_es": "Los jefes te dicen que vengas un toque."
+  },
+  {
+    "lang": "es",
+    "original_en": "This party is gonna be lit! [19]",
+    "original_register": "excited",
+    "correct_tone_es": "¡Esta joda va a estar re piola!",
+    "wrong_tone_es": "Esta celebración será sumamente entretenida."
+  },
+  {
+    "lang": "es",
+    "original_en": "Hey buddy, what's up? [20]",
+    "original_register": "casual",
+    "correct_tone_es": "Che, ¿cómo andás?",
+    "wrong_tone_es": "Buenos días, estimado señor."
+  },
+  {
+    "lang": "es",
+    "original_en": "I respectfully disagree, sir. [21]",
+    "original_register": "formal",
+    "correct_tone_es": "Respetuosamente difiero, señor.",
+    "wrong_tone_es": "Che viejo, cualquiera lo que decís."
+  },
+  {
+    "lang": "es",
+    "original_en": "Grab me a beer. [22]",
+    "original_register": "casual",
+    "correct_tone_es": "Pasame una birra, dale?",
+    "wrong_tone_es": "Tenga la amabilidad de alcanzarme una cerveza."
+  },
+  {
+    "lang": "es",
+    "original_en": "The board requests your presence. [23]",
+    "original_register": "formal",
+    "correct_tone_es": "El directorio solicita su presencia.",
+    "wrong_tone_es": "Los jefes te dicen que vengas un toque."
+  },
+  {
+    "lang": "es",
+    "original_en": "This party is gonna be lit! [24]",
+    "original_register": "excited",
+    "correct_tone_es": "¡Esta joda va a estar re piola!",
+    "wrong_tone_es": "Esta celebración será sumamente entretenida."
+  }
+]
