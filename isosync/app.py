@@ -32,7 +32,6 @@ _env = IsoSyncEnvironment()
 
 class ResetRequest(BaseModel):
     level: int = 1
-    language: str = "Hindi"
 
 
 class StepRequest(BaseModel):
@@ -57,7 +56,7 @@ def info():
 
 @app.post("/reset")
 def reset(req: ResetRequest = ResetRequest()):
-    obs = _env.reset(level=req.level, language=req.language)
+    obs = _env.reset(level=req.level)
     return {"observation": obs, "state": _env.state()}
 
 
