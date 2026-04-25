@@ -13,8 +13,10 @@ RUN pip install --no-cache-dir -r training/requirements.txt
 
 COPY . .
 
+RUN chmod +x start.sh
+
 ENV PYTHONUNBUFFERED=1
 
 EXPOSE 7860
 
-CMD ["python", "app.py"]
+CMD ["bash", "start.sh"]

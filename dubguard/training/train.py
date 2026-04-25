@@ -40,7 +40,7 @@ LORA_RANK           = 16
 LEARNING_RATE       = 5e-6
 OUTPUT_DIR          = PROJECT_ROOT / "training" / "checkpoints"
 LOGS_DIR            = PROJECT_ROOT / "training" / "logs"
-HF_REPO_NAME        = "dubguard-qwen2.5-3b-instruct"   # set your HF username/repo
+HF_REPO_NAME        = "varun1235/dubguard-qwen2.5-3b-instruct"
 # ══════════════════════════════════════════════════════════════════════════════
 
 # Create all output directories up front
