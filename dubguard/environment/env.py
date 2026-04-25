@@ -13,6 +13,10 @@ Episode sampling order:
 import copy
 import sys
 import os
+try:
+    from environment.base import Environment
+except ImportError:
+    from base import Environment  # fallback when run from within environment/
 from rewards.combined import compute_reward
 
 # ── fallback hardcoded episode ─────────────────────────────────────────────────
@@ -61,7 +65,7 @@ def _load_episodes() -> list[dict]:
     return [_FALLBACK_EPISODE]
 
 
-class DubGuardEnvironment:
+class DubGuardEnvironment(Environment):
     def __init__(self, episodes: list[dict] | None = None):
         """
         Args:
@@ -144,3 +148,30 @@ class DubGuardEnvironment:
 
     def __repr__(self) -> str:
         return f"DubGuardEnvironment(episodes={len(self._episodes)}, cursor={self._cursor})"
+
+    # ── OpenEnv metadata ───────────────────────────────────────────────────────
+
+    def reward_range(self) -> tuple[float, float]:
+        return (-0.3, 1.0)
+
+    def observation_space(self) -> dict:
+        return {
+            "type": "structured_text",
+            "fields": ["episode_id", "segment_id", "difficulty_level",
+                       "original", "dubbed", "next_segment_start_seconds",
+                       "max_allowed_dubbed_duration_seconds"],
+        }
+
+    def action_space(self) -> dict:
+        return {
+            "type": "structured_text",
+            "fields": {
+                "segment_id": "int",
+                "error_type": ["none", "timing_collision", "mistranslation",
+                               "tone_mismatch", "cultural_mismatch"],
+                "severity": ["PASS", "WARN", "BLOCK"],
+                "reason": "str",
+                "suggested_fix": "str",
+                "estimated_fix_duration": "float",
+            },
+        }

@@ -15,4 +15,6 @@ COPY . .
 
 ENV PYTHONUNBUFFERED=1
 
-CMD ["python", "training/train.py"]
+EXPOSE 7860
+
+CMD ["python", "app.py"]
