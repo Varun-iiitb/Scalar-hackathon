@@ -1,0 +1,5 @@
+*.png
+*.pyc
+__pycache__/
+sample_output.json
+logs.txt
