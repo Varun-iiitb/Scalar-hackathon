@@ -13,9 +13,9 @@ dependency. We use a custom rollout loop instead:
   4. Backprop and update with AdamW
 
 Curriculum:
-  Episodes   0 –  200  →  Level 1 (Portuguese, 5 segments, 0.5s slack)
-  Episodes 200 –  500  →  Level 2 (Portuguese, 8 segments, 0.2s slack)
-  Episodes 500 – 1000  →  Level 3 (Hindi,      10 segments, 0.1s slack)
+  Episodes   0 –  150  →  Level 1 (Portuguese, 5 segments,  0.5s slack)
+  Episodes 150 –  300  →  Level 2 (Portuguese, 8 segments,  0.2s slack)
+  Episodes 300 –  500  →  Level 3 (Portuguese, 10 segments, 0.05s slack)
 
 Run:
   python train.py
@@ -35,10 +35,10 @@ sys.path.insert(0, str(PROJECT_ROOT))
 #  CONFIGURATION
 # ══════════════════════════════════════════════════════════════════════════════
 MODEL_NAME          = "unsloth/Qwen2.5-1.5B-Instruct"
-TOTAL_EPISODES      = 1000
-EASY_THRESHOLD      = 200    # episodes 0-199   → level 1 (Portuguese)
-MEDIUM_THRESHOLD    = 500    # episodes 200-499 → level 2 (Portuguese)
-                             # episodes 500-999 → level 3 (Hindi)
+TOTAL_EPISODES      = 500
+EASY_THRESHOLD      = 150    # episodes 0-149   → level 1 (Portuguese, 5 seg, 0.5s)
+MEDIUM_THRESHOLD    = 300    # episodes 150-299 → level 2 (Portuguese, 8 seg, 0.2s)
+                             # episodes 300-499 → level 3 (Portuguese, 10 seg, 0.05s)
 LOG_INTERVAL        = 10
 MAX_PROMPT_LEN      = 400    # tokens — keeps each prompt well inside context
 MAX_NEW_TOKENS      = 80     # enough for one translated sentence
@@ -164,9 +164,9 @@ def main():
     print(f"  Model          : {MODEL_NAME}")
     print(f"  Total episodes : {TOTAL_EPISODES}")
     print(f"  Curriculum     :")
-    print(f"    L1 (0-{EASY_THRESHOLD-1}):   Portuguese, 5 segments, 0.5s slack")
-    print(f"    L2 ({EASY_THRESHOLD}-{MEDIUM_THRESHOLD-1}): Portuguese, 8 segments, 0.2s slack")
-    print(f"    L3 ({MEDIUM_THRESHOLD}-{TOTAL_EPISODES-1}): Hindi,      10 segments, 0.1s slack")
+    print(f"    L1 (0-{EASY_THRESHOLD-1}):   Portuguese, 5 segments,  0.5s slack")
+    print(f"    L2 ({EASY_THRESHOLD}-{MEDIUM_THRESHOLD-1}): Portuguese, 8 segments,  0.2s slack")
+    print(f"    L3 ({MEDIUM_THRESHOLD}-{TOTAL_EPISODES-1}): Portuguese, 10 segments, 0.05s slack")
     print(f"  Learning rate  : {LEARNING_RATE}")
     print(f"  LoRA rank      : {LORA_RANK}")
     print("=" * 65)
@@ -192,10 +192,17 @@ def main():
     model.train()
 
     optimizer = torch.optim.AdamW(model.parameters(), lr=LEARNING_RATE)
+    scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=100, gamma=0.9)
     env       = IsoSyncEnvironment()
 
     # Exponential moving average of reward — used as REINFORCE baseline
     running_baseline = 0.0
+
+    # Early stopping
+    best_reward      = -999.0
+    patience_counter = 0
+    PATIENCE         = 100
+    BEST_MODEL_DIR   = OUTPUT_DIR / "best_model"
 
     # ── Training loop ──────────────────────────────────────────────────────────
     for episode in range(TOTAL_EPISODES):
@@ -233,6 +240,19 @@ def main():
         # Update running baseline (EMA of mean episode reward)
         mean_reward      = sum(step_rewards) / max(1, len(step_rewards))
         running_baseline = 0.9 * running_baseline + 0.1 * mean_reward
+        scheduler.step()
+
+        # Early stopping — save best model checkpoint
+        if mean_reward > best_reward:
+            best_reward      = mean_reward
+            patience_counter = 0
+            model.save_pretrained(str(BEST_MODEL_DIR))
+            tokenizer.save_pretrained(str(BEST_MODEL_DIR))
+        else:
+            patience_counter += 1
+            if patience_counter >= PATIENCE:
+                print(f"  [early stopping at episode {episode} — best reward {best_reward:.4f}]")
+                break
 
         # ── Log every LOG_INTERVAL episodes ────────────────────────────────────
         if episode % LOG_INTERVAL == 0:

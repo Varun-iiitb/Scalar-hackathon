@@ -50,18 +50,34 @@ _NUMBER_WORDS = {
 }
 
 # ── Locale wordlists ───────────────────────────────────────────────────────────
-LOCALE_WORDS = {
-    "Mumbai": {
-        "यार", "अरे", "बस", "भाई", "हाँ", "नहीं", "तो", "क्या", "अच्छा",
-        "बिलकुल", "थोड़ा", "जरा", "एकदम", "चलो", "देखो", "मतलब",
-        "सही", "पक्का", "कमाल", "ठीक", "वैसे", "दरअसल", "फिर",
-    },
+LOCALE_WORDLISTS = {
     "Brazil": {
-        "cara", "legal", "bacana", "então", "né", "tá", "gente", "muito",
-        "bem", "aqui", "agora", "também", "ainda", "só", "já", "ótimo",
-        "show", "tipo", "vamos", "sempre", "isso", "assim", "aí", "bom",
+        "approved": [
+            "você", "tudo", "muito", "legal", "gente", "cara",
+            "ótimo", "incrível", "rápido", "fácil", "agora",
+            "então", "super", "bacana", "show", "né", "tá",
+            "bom", "bem", "fazer", "vamos", "aqui", "isso",
+            "também", "ainda", "só", "já", "assim", "aí",
+            "sempre", "tipo", "isso", "aqui", "para", "com",
+            "uma", "que", "por", "não", "mais", "como", "seu",
+            "sua", "este", "esta", "esse", "essa", "seu", "sua",
+        ],
+        "penalized": ["vosotros", "usted", "hola", "gracias"],
+    },
+    "Mumbai": {
+        "approved": [
+            "यह", "है", "और", "के", "में", "को", "से",
+            "पर", "एक", "हम", "आप", "वह", "जो", "कि",
+            "बहुत", "अच्छा", "जल्दी", "आसान", "करें",
+            "देखें", "यहां", "अब", "तो", "भी", "यार",
+            "अरे", "भाई", "सही", "ठीक", "चलो", "बस",
+        ],
+        "penalized": [],
     },
 }
+
+# Keep backward-compatible alias
+LOCALE_WORDS = {k: set(v["approved"]) for k, v in LOCALE_WORDLISTS.items()}
 
 # ── Singletons ────────────────────────────────────────────────────────────────
 _CHRF     = CHRF()
@@ -137,32 +153,44 @@ def semantic_reward(translation: str, references: list[str]) -> float:
 def budget_reward(budget_deficit: float) -> float:
     """
     Score how well the agent manages the cumulative timing deficit.
-    Deficit here is the EFFECTIVE deficit after banking is applied.
-      < 0.2s → 1.0,  > 2.0s → 0.0,  linear between.
+    Graduated thresholds calibrated to where the agent actually starts (~8-15s).
+    This gives a gradient from the beginning of training rather than zero signal.
     Returns float in [0.0, 1.0].
     """
-    if budget_deficit < 0.2:
+    if budget_deficit < 1.0:
         return 1.0
-    if budget_deficit > 2.0:
-        return 0.0
-    return round(max(0.0, 1.0 - budget_deficit / 2.0), 4)
+    if budget_deficit < 3.0:
+        return 0.5
+    if budget_deficit < 6.0:
+        return 0.2
+    if budget_deficit < 10.0:
+        return 0.05
+    return 0.0
 
 
 # ── REWARD 4: Locale ─────────────────────────────────────────────────────────
 
 def locale_reward(translation: str, locale: str) -> float:
     """
-    Score locale-appropriateness as fraction of words in locale wordlist.
+    Score locale-appropriateness using approved/penalized word lists.
+    Gives partial credit (0.05 floor) so agent always has a gradient.
     Returns float in [0.0, 1.0].
     """
-    wordlist = LOCALE_WORDS.get(locale, set())
-    if not wordlist:
-        return 0.5
-    words = [w.strip("।.,!?\"'()") for w in translation.split()]
+    if locale not in LOCALE_WORDLISTS:
+        return 0.1
+
+    wordlist = LOCALE_WORDLISTS[locale]
+    words = [w.strip("।.,!?\"'()").lower() for w in translation.split()]
     if not words:
         return 0.0
-    matches = sum(1 for w in words if w in wordlist)
-    return round(min(1.0, matches / max(1, len(words))), 4)
+
+    approved_count   = sum(1 for w in words if w in wordlist["approved"])
+    penalized_count  = sum(1 for w in words if w in wordlist["penalized"])
+
+    base_score = approved_count / max(len(words), 1)
+    penalty    = penalized_count * 0.2
+    score      = max(0.05, base_score - penalty)
+    return round(min(1.0, score), 4)
 
 
 # ── REWARD 5: Coherence ───────────────────────────────────────────────────────

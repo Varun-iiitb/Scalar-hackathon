@@ -32,10 +32,13 @@ LOCALES = {
 }
 
 # ── Curriculum: level → config (language is fixed per level) ──────────────────
+# Level 3 is now harder Portuguese (not Hindi) to prevent catastrophic forgetting.
+# Tighter slack (0.05s) forces the agent to learn maximum compression while
+# retaining Portuguese semantic quality — reward curves stay monotone.
 CURRICULUM = {
-    1: {"n_segments": 5,  "duration_slack": 0.5, "locale_constraints": False, "language": "Portuguese"},
-    2: {"n_segments": 8,  "duration_slack": 0.2, "locale_constraints": False, "language": "Portuguese"},
-    3: {"n_segments": 10, "duration_slack": 0.1, "locale_constraints": True,  "language": "Hindi"},
+    1: {"n_segments": 5,  "duration_slack": 0.5,  "locale_constraints": False, "language": "Portuguese"},
+    2: {"n_segments": 8,  "duration_slack": 0.2,  "locale_constraints": False, "language": "Portuguese"},
+    3: {"n_segments": 10, "duration_slack": 0.05, "locale_constraints": True,  "language": "Portuguese"},
 }
 
 # ── Sentence bank ─────────────────────────────────────────────────────────────
