@@ -1,0 +1,36 @@
+name: isosync
+version: 0.1.0
+description: >
+  RL environment for training LLMs to generate
+  isochronous video translations under cumulative
+  timing budget constraints
+entry_point: environment.py
+language: python
+observation_space: structured_text
+action_space: structured_text
+reward_range:
+  min: -1.0
+  max: 1.0
+supported_languages:
+  - Hindi
+  - Portuguese
+curriculum_levels:
+  - level: 1
+    segments: 5
+    duration_slack: 0.5s
+    locale_constraints: false
+  - level: 2
+    segments: 8
+    duration_slack: 0.2s
+    locale_constraints: false
+  - level: 3
+    segments: 10
+    duration_slack: 0.1s
+    locale_constraints: true
+tags:
+  - dubbing
+  - translation
+  - timing
+  - world-modeling
+  - isochrony
+  - reels
