@@ -2,7 +2,10 @@ FROM pytorch/pytorch:2.1.0-cuda11.8-cudnn8-runtime
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y git ffmpeg \
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ=UTC
+
+RUN apt-get update && apt-get install -y git ffmpeg tzdata \
     && rm -rf /var/lib/apt/lists/*
 
 COPY training/requirements.txt training/requirements.txt
