@@ -10,12 +10,12 @@ except ImportError:
 
 _model = None
 
-# Rough words-per-minute estimates per language
-WPM_MAP = {
-    "hi": 110,
-    "pt": 130,
-    "es": 130,
-    "en": 150
+# Syllable-based speaking rates (syllables per second) — more accurate than WPM
+SPEAKING_RATES = {
+    "hi": 4.5,
+    "pt": 5.2,
+    "es": 5.0,
+    "en": 4.0,
 }
 
 def get_correction_reward(agent_action, ground_truth, language="en"):
@@ -51,8 +51,9 @@ def get_correction_reward(agent_action, ground_truth, language="en"):
         sim_score = cosine_similarity(gt_emb, agent_emb)[0][0]
 
     word_count = len(re.findall(r"\w+", str(agent_fix)))
-    wpm = WPM_MAP.get(str(language)[:2].lower(), 150)
-    estimated_duration = (word_count / wpm) * 60.0
+    rate = SPEAKING_RATES.get(str(language)[:2].lower(), 4.0)
+    # Approximate syllables as 1.5× word count for non-Devanagari text
+    estimated_duration = (word_count * 1.5) / rate + word_count * 0.03
     max_duration = ground_truth.get("fix_duration", 0.0)
 
     timing_penalty = 0.0
