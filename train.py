@@ -1,27 +1,32 @@
 """
-IsoSync GRPO training script.
+IsoSync training script — REINFORCE with custom episode rollouts.
 
-Trains Qwen2.5-1.5B-Instruct to generate isochronous dubbing translations
-under cumulative timing budget pressure using GRPO via Unsloth + TRL.
+Why not GRPOTrainer with a static dataset?
+GRPOTrainer expects a fixed prompt dataset. IsoSync's core novelty is the
+SEQUENTIAL budget mechanic: each translation affects the budget available
+for future segments in the same episode. A static dataset destroys this
+dependency. We use a custom rollout loop instead:
+
+  1. Run a full episode (reset → step × N → done)
+  2. Collect all (prompt, translation, reward) tuples
+  3. Compute REINFORCE loss: L = -log_prob(translation) * advantage
+  4. Backprop and update with AdamW
 
 Curriculum:
-  Episodes   0 –  200  →  level 1  (5 segments, 0.5s slack)
-  Episodes 200 –  500  →  level 2  (8 segments, 0.2s slack)
-  Episodes 500 – 1000  →  level 3  (10 segments, 0.1s slack + locale)
+  Episodes   0 –  200  →  Level 1 (Portuguese, 5 segments, 0.5s slack)
+  Episodes 200 –  500  →  Level 2 (Portuguese, 8 segments, 0.2s slack)
+  Episodes 500 – 1000  →  Level 3 (Hindi,      10 segments, 0.1s slack)
 
 Run:
   python train.py
 """
 
 import sys
-import os
 import csv
-import json
 import random
 from pathlib import Path
 from datetime import datetime
 
-# ── Ensure isosync/ is on the path ────────────────────────────────────────────
 PROJECT_ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
@@ -30,15 +35,17 @@ sys.path.insert(0, str(PROJECT_ROOT))
 # ══════════════════════════════════════════════════════════════════════════════
 MODEL_NAME          = "unsloth/Qwen2.5-1.5B-Instruct"
 TOTAL_EPISODES      = 1000
-EASY_THRESHOLD      = 200    # episodes 0-199   → level 1
-MEDIUM_THRESHOLD    = 500    # episodes 200-499 → level 2
-                             # episodes 500-999 → level 3
-LOG_INTERVAL        = 10     # log to CSV every N episodes
-NUM_GENERATIONS     = 4      # GRPO: completions per prompt
-MAX_SEQ_LEN         = 512
-LORA_RANK           = 8
-LEARNING_RATE       = 5e-6
-LANGUAGES           = ["Hindi", "Portuguese"]
+EASY_THRESHOLD      = 200    # episodes 0-199   → level 1 (Portuguese)
+MEDIUM_THRESHOLD    = 500    # episodes 200-499 → level 2 (Portuguese)
+                             # episodes 500-999 → level 3 (Hindi)
+LOG_INTERVAL        = 10
+MAX_PROMPT_LEN      = 400    # tokens — keeps each prompt well inside context
+MAX_NEW_TOKENS      = 80     # enough for one translated sentence
+LORA_RANK           = 16
+LEARNING_RATE       = 1e-5
+GRAD_CLIP           = 1.0
+TEMPERATURE         = 0.7
+CHECKPOINT_EVERY    = 100
 OUTPUT_DIR          = PROJECT_ROOT / "checkpoints"
 LOGS_DIR            = PROJECT_ROOT / "logs"
 HF_REPO_NAME        = "varun1235/isosync-qwen2.5-1.5b"
@@ -50,16 +57,10 @@ LOGS_DIR.mkdir(parents=True, exist_ok=True)
 
 CSV_PATH = LOGS_DIR / "rewards_log.csv"
 
-# ── Imports after path setup ───────────────────────────────────────────────────
 import torch
-from datasets import Dataset
-from trl import GRPOConfig, GRPOTrainer
 from unsloth import FastLanguageModel
+from environment import IsoSyncEnvironment
 
-from data_gen import generate_episode
-from rewards import compute_reward, timing_reward, semantic_reward, budget_reward, locale_reward
-
-# ── CSV setup ─────────────────────────────────────────────────────────────────
 CSV_FIELDS = [
     "episode", "level", "language",
     "total_reward", "timing_reward", "semantic_reward",
@@ -71,153 +72,83 @@ with open(CSV_PATH, "w", newline="", encoding="utf-8") as f:
     csv.DictWriter(f, fieldnames=CSV_FIELDS).writeheader()
 
 
-# ── Reward function for GRPOTrainer ───────────────────────────────────────────
+# ── Curriculum helpers ─────────────────────────────────────────────────────────
 
-def grpo_reward_fn(
-    completions: list[str],
-    reference_translation: list[str],
-    original_duration: list[float],
-    target_language: list[str],
-    locale: list[str],
-    original_text: list[str],
-    budget_deficit_at_step: list[float],
-    **kwargs,
-) -> list[float]:
+def get_level(episode: int) -> int:
+    if episode < EASY_THRESHOLD:
+        return 1
+    if episode < MEDIUM_THRESHOLD:
+        return 2
+    return 3
+
+
+# ── Translation generator ─────────────────────────────────────────────────────
+
+def generate_translation(model, tokenizer, prompt: str) -> tuple[str, torch.Tensor]:
     """
-    Reward function called by TRL GRPOTrainer.
+    Generate a translation from the model.
 
-    Each call receives `num_generations` completions for one prompt,
-    plus the dataset columns broadcast to match.
-
-    We reconstruct the segment dict and call compute_reward for each completion.
+    Returns:
+        translation: decoded text (new tokens only, prompt stripped)
+        output_ids:  full token sequence (prompt + response) as tensor
+                     — used for gradient computation in policy_gradient_loss
     """
-    rewards = []
-    for (completion, ref, dur, lang, loc, orig, deficit) in zip(
-        completions, reference_translation, original_duration,
-        target_language, locale, original_text, budget_deficit_at_step,
-    ):
-        # Build a minimal segment dict that rewards.py expects
-        segment = {
-            "original_text":         orig,
-            "original_duration":     float(dur),
-            "target_language":       lang,
-            "locale":                loc,
-            "reference_translation": ref,
-        }
-        r = compute_reward(completion.strip(), segment, float(deficit))
-        rewards.append(float(r))
-    return rewards
+    inputs = tokenizer(
+        prompt,
+        return_tensors="pt",
+        truncation=True,
+        max_length=MAX_PROMPT_LEN,
+    ).to(model.device)
+
+    with torch.no_grad():
+        output_ids = model.generate(
+            **inputs,
+            max_new_tokens=MAX_NEW_TOKENS,
+            temperature=TEMPERATURE,
+            do_sample=True,
+            pad_token_id=tokenizer.eos_token_id,
+        )
+
+    prompt_len  = inputs["input_ids"].shape[1]
+    new_ids     = output_ids[0, prompt_len:]
+    translation = tokenizer.decode(new_ids, skip_special_tokens=True).strip()
+
+    return translation, output_ids, prompt_len
 
 
-# ── Dataset builder ───────────────────────────────────────────────────────────
+# ── REINFORCE loss ────────────────────────────────────────────────────────────
 
-def _build_dataset(level: int, n_episodes: int = 200) -> Dataset:
+def policy_gradient_loss(
+    model,
+    output_ids: torch.Tensor,
+    prompt_len: int,
+    reward: float,
+    baseline: float,
+) -> torch.Tensor:
     """
-    Generate n_episodes episodes at the given level and flatten to
-    individual segment observations for GRPOTrainer.
+    REINFORCE loss for one (prompt + response, reward) pair.
 
-    Each row = one segment prompt with metadata columns for the reward fn.
-    Budget deficit is pre-set to 0.0 for all rows (the environment's
-    sequential deficit tracking happens during actual inference; the GRPO
-    dataset teaches per-segment quality independently).
+    Steps:
+      1. Forward pass through model with full sequence (prompt + response)
+      2. Mask prompt tokens in labels (set to -100 so loss ignores them)
+      3. CE loss = mean NLL over response tokens
+      4. pg_loss = CE * advantage   (minimising this = maximising log_prob * advantage)
+
+    Args:
+        output_ids: shape [1, prompt_len + response_len]
+        prompt_len: number of prompt tokens to mask from loss
+        reward:     scalar reward for this step
+        baseline:   running mean reward (variance reduction)
     """
-    rows = []
-    for ep_idx in range(n_episodes):
-        lang = random.choice(LANGUAGES)
-        segments = generate_episode(level=level, language=lang, seed=ep_idx)
-        for seg in segments:
-            rows.append({
-                "prompt": [
-                    {
-                        "role": "user",
-                        "content": _format_prompt(seg, budget_deficit=0.0),
-                    }
-                ],
-                "reference_translation":  seg["reference_translation"],
-                "original_duration":      seg["original_duration"],
-                "target_language":        seg["target_language"],
-                "locale":                 seg["locale"],
-                "original_text":          seg["original_text"],
-                "budget_deficit_at_step": 0.0,
-            })
-    return Dataset.from_list(rows)
+    labels = output_ids.clone()
+    labels[:, :prompt_len] = -100   # ignore prompt in loss
 
+    outputs   = model(input_ids=output_ids, labels=labels)
+    ce_loss   = outputs.loss                     # mean NLL over response tokens
+    advantage = reward - baseline
+    pg_loss   = ce_loss * advantage              # REINFORCE: minimise -log_p * advantage
 
-def _format_prompt(seg: dict, budget_deficit: float = 0.0) -> str:
-    lang = seg["target_language"]
-    dur  = seg["original_duration"]
-    loc  = seg["locale"]
-
-    status = "ON TRACK" if budget_deficit < 0.2 else f"OVER BUDGET by {budget_deficit:.1f}s"
-
-    return (
-        f"You are a professional video dubbing translator.\n\n"
-        f"Translate the following English segment into {lang}.\n\n"
-        f"Original: {seg['original_text']}\n"
-        f"Time window: {dur} seconds\n"
-        f"Max syllables: {seg['max_syllables']}\n"
-        f"Budget status: {status}\n"
-        f"Locale: {loc}\n\n"
-        f"Rules:\n"
-        f"- Your translation MUST fit within {dur} seconds when spoken\n"
-        f"- Preserve the core meaning\n"
-        f"- Sound natural in {loc}\n"
-        f"- Do not copy the English text\n\n"
-        f"Respond with ONLY the translation. No explanation."
-    )
-
-
-# ── Episode evaluator (for CSV logging) ───────────────────────────────────────
-
-def _run_eval_episode(model, tokenizer, level: int, language: str) -> dict:
-    """
-    Run one full episode with the model using greedy decoding.
-    Returns per-component reward averages and budget deficit.
-    Used for logging only — not part of training.
-    """
-    from environment import IsoSyncEnvironment
-    env = IsoSyncEnvironment()
-    obs = env.reset(level=level, language=language)
-
-    totals = {k: 0.0 for k in ["timing", "semantic", "budget", "locale", "combined"]}
-    n_steps = 0
-    done_reason = "unknown"
-
-    while True:
-        # Tokenise the observation
-        inputs = tokenizer(obs, return_tensors="pt", truncation=True,
-                           max_length=MAX_SEQ_LEN).to(model.device)
-        with torch.no_grad():
-            out = model.generate(
-                **inputs, max_new_tokens=128,
-                do_sample=False, temperature=1.0,
-            )
-        raw = tokenizer.decode(out[0][inputs["input_ids"].shape[1]:],
-                               skip_special_tokens=True).strip()
-
-        obs, reward, done, info = env.step({"translation": raw})
-        n_steps += 1
-
-        for k in ["timing", "semantic", "budget", "locale"]:
-            totals[k] += info.get(f"{k}_reward", 0.0)
-        totals["combined"] += info.get("combined_reward", reward)
-
-        if done:
-            done_reason = info.get("done_reason", "completed")
-            final_deficit = info.get("budget_deficit", 0.0)
-            break
-
-    n = max(1, n_steps)
-    return {
-        "timing_reward":   round(totals["timing"] / n, 4),
-        "semantic_reward": round(totals["semantic"] / n, 4),
-        "budget_reward":   round(totals["budget"] / n, 4),
-        "locale_reward":   round(totals["locale"] / n, 4),
-        "total_reward":    round(totals["combined"] / n, 4),
-        "budget_deficit":  round(final_deficit, 4),
-        "done_reason":     done_reason,
-        "n_segments":      n_steps,
-    }
+    return pg_loss
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -226,32 +157,30 @@ def _run_eval_episode(model, tokenizer, level: int, language: str) -> dict:
 
 def main():
     print("=" * 65)
-    print("  IsoSync GRPO Training")
+    print("  IsoSync Training — REINFORCE with Episode Rollouts")
     print(f"  {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print("=" * 65)
     print(f"  Model          : {MODEL_NAME}")
     print(f"  Total episodes : {TOTAL_EPISODES}")
-    print(f"  Curriculum     : L1 0-{EASY_THRESHOLD-1} | "
-          f"L2 {EASY_THRESHOLD}-{MEDIUM_THRESHOLD-1} | "
-          f"L3 {MEDIUM_THRESHOLD}-{TOTAL_EPISODES-1}")
-    print(f"  Languages      : {LANGUAGES}")
-    print(f"  GRPO gens/step : {NUM_GENERATIONS}")
+    print(f"  Curriculum     :")
+    print(f"    L1 (0-{EASY_THRESHOLD-1}):   Portuguese, 5 segments, 0.5s slack")
+    print(f"    L2 ({EASY_THRESHOLD}-{MEDIUM_THRESHOLD-1}): Portuguese, 8 segments, 0.2s slack")
+    print(f"    L3 ({MEDIUM_THRESHOLD}-{TOTAL_EPISODES-1}): Hindi,      10 segments, 0.1s slack")
+    print(f"  Learning rate  : {LEARNING_RATE}")
     print(f"  LoRA rank      : {LORA_RANK}")
-    print(f"  Output dir     : {OUTPUT_DIR}")
     print("=" * 65)
 
     # ── Load model ─────────────────────────────────────────────────────────────
     model, tokenizer = FastLanguageModel.from_pretrained(
         model_name=MODEL_NAME,
-        max_seq_length=MAX_SEQ_LEN,
+        max_seq_length=512,
         load_in_4bit=True,
         dtype=None,
     )
     model = FastLanguageModel.get_peft_model(
         model,
         r=LORA_RANK,
-        target_modules=["q_proj", "k_proj", "v_proj", "o_proj",
-                        "gate_proj", "up_proj", "down_proj"],
+        target_modules=["q_proj", "v_proj"],
         lora_alpha=LORA_RANK * 2,
         lora_dropout=0.05,
         bias="none",
@@ -259,87 +188,87 @@ def main():
         random_state=42,
     )
     tokenizer.padding_side = "left"
+    model.train()
 
-    # ── Curriculum phases ──────────────────────────────────────────────────────
-    phases = [
-        {"name": "Level 1 — easy",        "level": 1, "max_steps": EASY_THRESHOLD,                         "n_gen_eps": 200},
-        {"name": "Level 2 — medium",       "level": 2, "max_steps": MEDIUM_THRESHOLD - EASY_THRESHOLD,      "n_gen_eps": 300},
-        {"name": "Level 3 — hard+locale",  "level": 3, "max_steps": TOTAL_EPISODES - MEDIUM_THRESHOLD,      "n_gen_eps": 500},
-    ]
+    optimizer = torch.optim.AdamW(model.parameters(), lr=LEARNING_RATE)
+    env       = IsoSyncEnvironment()
 
-    episode_counter = 0
+    # Exponential moving average of reward — used as REINFORCE baseline
+    running_baseline = 0.0
 
-    for phase in phases:
-        print(f"\n{'─'*65}")
-        print(f"  {phase['name']}  ({phase['max_steps']} training steps)")
-        print(f"{'─'*65}")
+    # ── Training loop ──────────────────────────────────────────────────────────
+    for episode in range(TOTAL_EPISODES):
+        level = get_level(episode)
+        obs   = env.reset(level=level)
 
-        dataset = _build_dataset(level=phase["level"], n_episodes=phase["n_gen_eps"])
-        print(f"  Dataset rows: {len(dataset)}")
+        # Collect full episode rollout
+        step_rewards   = []
+        last_info      = {}
+        done           = False
 
-        grpo_config = GRPOConfig(
-            output_dir=str(OUTPUT_DIR / phase["name"].replace(" ", "_")),
-            max_steps=phase["max_steps"],
-            per_device_train_batch_size=1,
-            gradient_accumulation_steps=4,
-            num_generations=NUM_GENERATIONS,
-            max_completion_length=128,
-            learning_rate=LEARNING_RATE,
-            lr_scheduler_type="cosine",
-            warmup_ratio=0.05,
-            logging_steps=1,
-            save_steps=100,
-            save_total_limit=2,
-            bf16=torch.cuda.is_bf16_supported(),
-            fp16=not torch.cuda.is_bf16_supported(),
-            report_to="none",
-            seed=42,
-        )
+        optimizer.zero_grad()
+        episode_loss = 0.0
 
-        trainer = GRPOTrainer(
-            model=model,
-            tokenizer=tokenizer,
-            reward_funcs=grpo_reward_fn,
-            args=grpo_config,
-            train_dataset=dataset,
-        )
+        while not done:
+            translation, output_ids, prompt_len = generate_translation(
+                model, tokenizer, obs
+            )
 
-        trainer.train()
+            obs, reward, done, info = env.step({"translation": translation})
+            last_info = info
 
-        # ── Log eval metrics every LOG_INTERVAL episodes (approximate) ─────────
-        for log_ep in range(0, phase["max_steps"], LOG_INTERVAL):
-            lang = random.choice(LANGUAGES)
-            metrics = _run_eval_episode(model, tokenizer, phase["level"], lang)
+            # Compute and accumulate gradient for this step
+            pg_loss = policy_gradient_loss(
+                model, output_ids, prompt_len, reward, running_baseline
+            )
+            pg_loss.backward()   # gradients accumulate across steps
+            episode_loss += pg_loss.item()
+            step_rewards.append(reward)
+
+        # Update after full episode (gradient accumulation over all steps)
+        torch.nn.utils.clip_grad_norm_(model.parameters(), GRAD_CLIP)
+        optimizer.step()
+
+        # Update running baseline (EMA of mean episode reward)
+        mean_reward      = sum(step_rewards) / max(1, len(step_rewards))
+        running_baseline = 0.9 * running_baseline + 0.1 * mean_reward
+
+        # ── Log every LOG_INTERVAL episodes ────────────────────────────────────
+        if episode % LOG_INTERVAL == 0:
             row = {
-                "episode":              episode_counter + log_ep,
-                "level":                phase["level"],
-                "language":             lang,
-                "total_reward":         metrics["total_reward"],
-                "timing_reward":        metrics["timing_reward"],
-                "semantic_reward":      metrics["semantic_reward"],
-                "budget_reward":        metrics["budget_reward"],
-                "locale_reward":        metrics["locale_reward"],
-                "budget_deficit":       metrics["budget_deficit"],
-                "done_reason":          metrics["done_reason"],
-                "n_segments_completed": metrics["n_segments"],
+                "episode":              episode,
+                "level":                level,
+                "language":             env._language,
+                "total_reward":         round(mean_reward, 4),
+                "timing_reward":        round(last_info.get("timing_reward", 0.0), 4),
+                "semantic_reward":      round(last_info.get("semantic_reward", 0.0), 4),
+                "budget_reward":        round(last_info.get("budget_reward", 0.0), 4),
+                "locale_reward":        round(last_info.get("locale_reward", 0.0), 4),
+                "budget_deficit":       round(last_info.get("final_deficit", last_info.get("budget_deficit", 0.0)), 4),
+                "done_reason":          last_info.get("done_reason", "completed"),
+                "n_segments_completed": last_info.get("n_segments", len(step_rewards)),
             }
             with open(CSV_PATH, "a", newline="", encoding="utf-8") as f:
                 csv.DictWriter(f, fieldnames=CSV_FIELDS).writerow(row)
 
-            if log_ep % (LOG_INTERVAL * 5) == 0:
-                print(
-                    f"  [ep {episode_counter + log_ep:>5}]  "
-                    f"total={metrics['total_reward']:+.3f}  "
-                    f"timing={metrics['timing_reward']:.3f}  "
-                    f"sem={metrics['semantic_reward']:.3f}  "
-                    f"budget={metrics['budget_reward']:.3f}  "
-                    f"locale={metrics['locale_reward']:.3f}  "
-                    f"deficit={metrics['budget_deficit']:.2f}s"
-                )
+            print(
+                f"  [ep {episode:>5}]  L{level}  "
+                f"reward={mean_reward:+.3f}  "
+                f"timing={row['timing_reward']:.3f}  "
+                f"sem={row['semantic_reward']:.3f}  "
+                f"budget={row['budget_reward']:.3f}  "
+                f"deficit={row['budget_deficit']:.2f}s  "
+                f"baseline={running_baseline:+.3f}"
+            )
 
-        episode_counter += phase["max_steps"]
+        # ── Checkpoint ─────────────────────────────────────────────────────────
+        if episode > 0 and episode % CHECKPOINT_EVERY == 0:
+            ckpt = OUTPUT_DIR / f"checkpoint-ep{episode}"
+            model.save_pretrained(str(ckpt))
+            tokenizer.save_pretrained(str(ckpt))
+            print(f"  [checkpoint saved → {ckpt}]")
 
-    # ── Save final model ───────────────────────────────────────────────────────
+    # ── Save final model ────────────────────────────────────────────────────────
     final_path = OUTPUT_DIR / "final"
     print(f"\nSaving final model → {final_path}")
     model.save_pretrained(str(final_path))
@@ -353,7 +282,6 @@ def main():
     except Exception as exc:
         print(f"Hub push skipped: {exc}")
 
-    # ── Generate plots ────────────────────────────────────────────────────────
     try:
         import plot_results
         plot_results.main()
