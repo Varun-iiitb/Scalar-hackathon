@@ -284,8 +284,65 @@ def load_tone_bank() -> list[dict]:
 
 # ── public API ────────────────────────────────────────────────────────────────
 
+LOCALE_CODE_MAP = {"IN": "hi-IN", "BR": "pt-BR", "AR": "es-AR"}
+
+
+def load_from_generated(path=None, shuffle: bool = True, seed: int = 42) -> list[dict]:
+    """Load from generated_dataset.json produced by data_gen.py.
+
+    Converts data_gen.py schema to the {observation, ground_truth} schema
+    expected by train.py / _build_dataset().
+    """
+    if path is None:
+        path = DATA_DIR / "generated_dataset.json"
+    raw = json.loads(Path(path).read_text(encoding="utf-8"))
+    episodes = []
+    for seg in raw:
+        orig   = seg["original"]
+        dubbed = seg["dubbed"]
+        gt     = seg["ground_truth"]
+        lang   = dubbed["language"]
+        locale = LOCALE_CODE_MAP.get(dubbed.get("locale", ""), LOCALE_MAP.get(lang, lang))
+        obs = {
+            "episode_id":       seg["episode_id"],
+            "segment_id":       f"seg_{seg['segment_id']:04d}",
+            "difficulty_level": seg["difficulty"],
+            "original": {
+                "text":               orig["text"],
+                "start_time":         orig.get("start_time", 0.0),
+                "end_time":           orig.get("end_time", orig.get("duration", 2.0)),
+                "duration_seconds":   orig.get("duration", 2.0),
+            },
+            "dubbed": {
+                "text":                       dubbed["text"],
+                "language_code":              lang,
+                "locale_code":                locale,
+                "estimated_duration_seconds": dubbed.get("estimated_duration", 2.0),
+            },
+            "next_segment_start_seconds":        seg.get("next_segment_start", 3.0),
+            "max_allowed_dubbed_duration_seconds": seg["max_allowed_dubbed_duration"],
+        }
+        episodes.append({
+            "observation": obs,
+            "ground_truth": {
+                "segment_id":   seg["segment_id"],
+                "error_type":   gt.get("error_type"),
+                "severity":     gt.get("severity", "PASS"),
+                "suggested_fix": gt.get("suggested_fix"),
+                "fix_duration": gt.get("fix_duration", 0.0),
+                "locale_rule":  gt.get("locale_rule"),
+            },
+        })
+    if shuffle:
+        random.Random(seed).shuffle(episodes)
+    return episodes
+
+
 def load_all(shuffle: bool = True, seed: int = 42) -> list[dict]:
-    """Load, deduplicate, and optionally shuffle all five banks."""
+    """Load episodes — prefers generated_dataset.json if present, else raw banks."""
+    generated_path = DATA_DIR / "generated_dataset.json"
+    if generated_path.exists():
+        return load_from_generated(generated_path, shuffle=shuffle, seed=seed)
     episodes = (
         load_timing_bank()
         + load_cultural_bank()

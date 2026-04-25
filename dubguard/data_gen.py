@@ -240,7 +240,7 @@ def add_clean_segment(base: Dict[str, Any]) -> Dict[str, Any]:
         "error_type": None,
         "severity": "PASS",
         "suggested_fix": None,
-        "fix_duration": round(est_dur, 2),
+        "fix_duration": 0.0,
         "locale_rule": None
     }
 
@@ -559,7 +559,7 @@ if __name__ == "__main__":
     print(f"\nLanguage distribution (target ~33% each):")
     for lc, count in lang_counts.items():
         pct = (count / total_segs * 100) if total_segs > 0 else 0
-        status = "✅" if 25 <= pct <= 45 else "⚠️  imbalanced"
+        status = "[OK]" if 25 <= pct <= 45 else "[!!] imbalanced"
         print(f"  {lc}: {count} ({pct:.1f}%) {status}")
 
     print(f"\nError type distribution:")
@@ -568,9 +568,9 @@ if __name__ == "__main__":
 
     print(f"\nAverage locale score: {avg_locale:.3f}")
     if avg_locale > 0.05:
-        print("  ✅ Locale reward will be non-zero during training")
+        print("  [OK] Locale reward will be non-zero during training")
     else:
-        print("  ❌ Locale score too low — check LOCALE_WORDS and bank data.")
+        print("  [FAIL] Locale score too low -- check LOCALE_WORDS and bank data.")
 
     over_budget = sum(
         1 for s in all_segments
@@ -579,9 +579,9 @@ if __name__ == "__main__":
     )
     print(f"\nPASS segments over budget: {over_budget}")
     if over_budget == 0:
-        print("  ✅ No artificial duration clamping detected")
+        print("  [OK] No artificial duration clamping detected")
     else:
-        print("  ⚠️  Some PASS segments exceed window — check add_clean_segment retry logic")
+        print("  [!!] Some PASS segments exceed window -- check add_clean_segment retry logic")
 
     dummy_count = sum(
         1 for s in all_segments
@@ -589,15 +589,15 @@ if __name__ == "__main__":
     )
     print(f"Dummy text segments: {dummy_count}")
     if dummy_count == 0:
-        print("  ✅ No dummy text found")
+        print("  [OK] No dummy text found")
     else:
-        print("  ❌ Dummy text still present — check add_cultural_mismatch fix")
+        print("  [FAIL] Dummy text still present -- check add_cultural_mismatch fix")
 
     print("\n" + "=" * 50)
     if all_valid and avg_locale > 0.05 and over_budget == 0 and dummy_count == 0:
-        print("✅ ALL CHECKS PASSED — data is ready for training")
+        print("[OK] ALL CHECKS PASSED -- data is ready for training")
     else:
-        print("❌ ISSUES FOUND — fix before training")
+        print("[FAIL] ISSUES FOUND -- fix before training")
         if not all_valid:       print("  - Validation failures in segments")
         if avg_locale <= 0.05:  print("  - Locale score too low")
         if over_budget > 0:     print("  - PASS segments over budget")
