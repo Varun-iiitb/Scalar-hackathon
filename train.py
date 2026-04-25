@@ -26,6 +26,7 @@ import csv
 import random
 from pathlib import Path
 from datetime import datetime
+import os
 
 PROJECT_ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(PROJECT_ROOT))
@@ -275,9 +276,10 @@ def main():
     tokenizer.save_pretrained(str(final_path))
 
     try:
+        hf_token = os.environ.get("HF_TOKEN")
         print(f"Pushing to HuggingFace Hub → {HF_REPO_NAME}")
-        model.push_to_hub(HF_REPO_NAME)
-        tokenizer.push_to_hub(HF_REPO_NAME)
+        model.push_to_hub(HF_REPO_NAME, token=hf_token)
+        tokenizer.push_to_hub(HF_REPO_NAME, token=hf_token)
         print("Push complete.")
     except Exception as exc:
         print(f"Hub push skipped: {exc}")
