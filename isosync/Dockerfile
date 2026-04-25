@@ -5,7 +5,7 @@ WORKDIR /app
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=UTC
 
-RUN apt-get update && apt-get install -y git ffmpeg tzdata \
+RUN apt-get update && apt-get install -y git ffmpeg tzdata build-essential \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt requirements.txt
