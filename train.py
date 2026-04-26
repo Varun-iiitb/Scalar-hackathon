@@ -24,9 +24,18 @@ Run:
 import sys
 import csv
 import random
+import warnings
 from pathlib import Path
 from datetime import datetime
 import os
+
+# Silence noisy transformers/unsloth warnings before any imports
+os.environ["TRANSFORMERS_VERBOSITY"]    = "error"
+os.environ["TOKENIZERS_PARALLELISM"]    = "false"
+os.environ["TRANSFORMERS_NO_ADVISORY_WARNINGS"] = "1"
+warnings.filterwarnings("ignore", category=FutureWarning)
+warnings.filterwarnings("ignore", category=UserWarning)
+warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 PROJECT_ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(PROJECT_ROOT))
@@ -190,6 +199,14 @@ def main():
     )
     tokenizer.padding_side = "left"
     model.train()
+
+    # Clear max_length so generate() with max_new_tokens stops printing
+    # "Both max_new_tokens and max_length seem to have been set" every call
+    model.generation_config.max_length = None
+
+    # Suppress transformers/unsloth runtime logging clutter
+    import transformers
+    transformers.logging.set_verbosity_error()
 
     optimizer = torch.optim.AdamW(model.parameters(), lr=LEARNING_RATE)
     scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=100, gamma=0.9)
