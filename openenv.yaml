@@ -1,36 +1,92 @@
 name: isosync
-version: 0.1.0
+version: 0.2.0
 description: >
-  RL environment for training LLMs to generate
-  isochronous video translations under cumulative
-  timing budget constraints
+  OpenEnv-compatible RL environment for training LLMs to generate
+  isochronous video translations under a per-segment time window and
+  a cumulative episode-level timing budget with under-run banking.
+
 entry_point: environment.py
 language: python
-observation_space: structured_text
-action_space: structured_text
+
+# Reward range for the combined scalar reward returned by step()
 reward_range:
   min: -1.0
   max: 1.0
+
+# Typed schemas exposed via FastAPI's /openapi.json (see schemas.py)
+observation_space:
+  schema: Observation
+  description: >
+    Structured per-segment context including original English text, target
+    language/locale, time window, syllable cap, cumulative budget remaining,
+    bank balance, deficit, previous translation, curriculum level, and the
+    formatted LLM prompt.
+action_space:
+  schema: Action
+  description: One translation string for the current segment.
+
+# All four curriculum levels are Portuguese only — Hindi was removed to
+# prevent catastrophic forgetting between phases.
 supported_languages:
-  - Hindi
   - Portuguese
+
 curriculum_levels:
   - level: 1
-    segments: 5
-    duration_slack: 0.5s
+    n_segments: 5
+    duration_slack: 0.5
     locale_constraints: false
+    language: Portuguese
+    difficulty: easy
   - level: 2
-    segments: 8
-    duration_slack: 0.2s
+    n_segments: 8
+    duration_slack: 0.3
     locale_constraints: false
+    language: Portuguese
+    difficulty: medium
   - level: 3
-    segments: 10
-    duration_slack: 0.1s
+    n_segments: 10
+    duration_slack: 0.15
+    locale_constraints: false
+    language: Portuguese
+    difficulty: hard
+  - level: 4
+    n_segments: 10
+    duration_slack: 0.05
     locale_constraints: true
+    language: Portuguese
+    difficulty: expert
+
+reward_components:
+  - name: timing
+    weight: 0.30
+    range: [0.0, 1.0]
+    description: How well the translation fits the per-segment time window.
+  - name: semantic
+    weight: 0.30
+    range: [0.0, 1.0]
+    description: Multi-reference chrF score against ground-truth translations.
+  - name: budget
+    weight: 0.20
+    range: [0.0, 1.0]
+    description: Smooth exponential decay over cumulative timing deficit.
+  - name: locale
+    weight: 0.10
+    range: [0.0, 1.0]
+    description: Locale-appropriate word usage (approved/penalized lists).
+  - name: coherence
+    weight: 0.10
+    range: [0.0, 1.0]
+    description: Numeric / entity consistency across the full episode.
+
+deployment:
+  hf_space: varun1235/dubguard-training
+  trained_model: varun1235/isosync-qwen2.5-1.5b
+  best_reward: 0.6349
+
 tags:
   - dubbing
   - translation
   - timing
-  - world-modeling
   - isochrony
-  - reels
+  - world-modeling
+  - openenv
