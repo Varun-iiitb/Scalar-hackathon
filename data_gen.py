@@ -32,13 +32,14 @@ LOCALES = {
 }
 
 # ── Curriculum: level → config (language is fixed per level) ──────────────────
-# Level 3 is now harder Portuguese (not Hindi) to prevent catastrophic forgetting.
-# Tighter slack (0.05s) forces the agent to learn maximum compression while
-# retaining Portuguese semantic quality — reward curves stay monotone.
+# 4-level curriculum eliminates the old L2->L3 difficulty cliff (0.2s -> 0.05s
+# was a 4x jump with no path to incremental improvement). Adding L3 at 0.15s
+# gives the agent a smooth ramp from coarse fitting to maximum compression.
 CURRICULUM = {
     1: {"n_segments": 5,  "duration_slack": 0.5,  "locale_constraints": False, "language": "Portuguese"},
-    2: {"n_segments": 8,  "duration_slack": 0.2,  "locale_constraints": False, "language": "Portuguese"},
-    3: {"n_segments": 10, "duration_slack": 0.05, "locale_constraints": True,  "language": "Portuguese"},
+    2: {"n_segments": 8,  "duration_slack": 0.3,  "locale_constraints": False, "language": "Portuguese"},
+    3: {"n_segments": 10, "duration_slack": 0.15, "locale_constraints": False, "language": "Portuguese"},
+    4: {"n_segments": 10, "duration_slack": 0.05, "locale_constraints": True,  "language": "Portuguese"},
 }
 
 # ── Sentence bank ─────────────────────────────────────────────────────────────
@@ -417,7 +418,7 @@ def generate_episode(
         duration_slack, locale_constraints
     """
     if level not in CURRICULUM:
-        raise ValueError(f"level must be 1, 2, or 3 — got {level}")
+        raise ValueError(f"level must be 1, 2, 3, or 4 — got {level}")
 
     cfg = CURRICULUM[level]
     language = cfg["language"]
@@ -457,7 +458,7 @@ def generate_episode(
 
 
 if __name__ == "__main__":
-    for lvl in (1, 2, 3):
+    for lvl in (1, 2, 3, 4):
         ep = generate_episode(level=lvl, seed=0)
         lang = CURRICULUM[lvl]["language"]
         print(f"Level {lvl} | {lang} | {len(ep)} segments")

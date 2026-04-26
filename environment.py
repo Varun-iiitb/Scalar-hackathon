@@ -338,6 +338,9 @@ class IsoSyncEnvironment(MCPEnvironment):
         seg      = self._segments[self._current_idx]
         lang     = seg["target_language"]
         dur      = seg["original_duration"]
+        max_syl  = seg["max_syllables"]
+        # Approximate word budget — Portuguese averages ~2 syllables per word
+        max_words = max(2, int(max_syl / 2))
         remaining = len(self._segments) - self._current_idx
         budget_remaining = self._budget_total - self._budget_deficit
 
@@ -349,7 +352,7 @@ class IsoSyncEnvironment(MCPEnvironment):
         else:
             status = (
                 f"OVER by {self._budget_deficit:.1f}s "
-                f"(bank: {self._budget_bank:.1f}s) — COMPRESS"
+                f"(bank: {self._budget_bank:.1f}s) — COMPRESS HARD"
             )
 
         prev_ctx = (
@@ -358,20 +361,20 @@ class IsoSyncEnvironment(MCPEnvironment):
         )
 
         return (
-            f"You are a professional video dubbing translator.\n\n"
-            f"Translate the following English segment into {lang}.\n\n"
-            f"Original: {seg['original_text']}\n"
-            f"Time window: {dur} seconds\n"
-            f"Max syllables: {seg['max_syllables']}\n"
-            f"Budget: {budget_remaining:.1f}s left for {remaining} segments\n"
+            f"DUBBING TRANSLATION — STRICT LENGTH LIMIT\n\n"
+            f"*** HARD LIMIT: {max_syl} syllables MAX (about {max_words} words) ***\n"
+            f"*** Anything longer breaks the dub — count syllables before writing ***\n\n"
+            f"English: \"{seg['original_text']}\"\n"
+            f"Translate to {lang} ({seg['locale']}) in <= {max_syl} syllables.\n\n"
+            f"Time window: {dur}s   |   Budget: {budget_remaining:.1f}s left for {remaining} segments\n"
             f"Status: {status}"
             f"{prev_ctx}\n\n"
             f"Rules:\n"
-            f"- Your translation MUST fit within {dur} seconds when spoken\n"
-            f"- Preserve the core meaning and all numbers exactly\n"
-            f"- Sound natural in {seg['locale']}\n"
-            f"- Do not copy the English text\n\n"
-            f"Reply with ONLY the translation. No explanation."
+            f"1. STAY UNDER {max_syl} SYLLABLES — be concise, drop filler words\n"
+            f"2. Keep all numbers exact (e.g. \"thirty\" -> \"30\" or \"trinta\")\n"
+            f"3. Sound natural to a {seg['locale']} speaker\n"
+            f"4. Do NOT copy the English\n\n"
+            f"Translation (<= {max_syl} syllables, no quotes, no explanation):"
         )
 
 

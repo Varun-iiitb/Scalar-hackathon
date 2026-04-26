@@ -45,9 +45,10 @@ sys.path.insert(0, str(PROJECT_ROOT))
 # ══════════════════════════════════════════════════════════════════════════════
 MODEL_NAME          = "unsloth/Qwen2.5-1.5B-Instruct"
 TOTAL_EPISODES      = 700
-EASY_THRESHOLD      = 100    # episodes 0-99    → level 1 (Portuguese, 5 seg, 0.5s)
-MEDIUM_THRESHOLD    = 250    # episodes 100-249 → level 2 (Portuguese, 8 seg, 0.2s)
-                             # episodes 250-699 → level 3 (Portuguese, 10 seg, 0.05s)
+LEVEL_2_START       = 100    # episodes 0-99    → L1 (5 seg,  0.5s slack)
+LEVEL_3_START       = 200    # episodes 100-199 → L2 (8 seg,  0.3s slack)
+LEVEL_4_START       = 400    # episodes 200-399 → L3 (10 seg, 0.15s slack)  ← new
+                             # episodes 400-699 → L4 (10 seg, 0.05s slack)
 LOG_INTERVAL        = 10
 MAX_PROMPT_LEN      = 400    # tokens — keeps each prompt well inside context
 MAX_NEW_TOKENS      = 80     # enough for one translated sentence
@@ -85,11 +86,13 @@ with open(CSV_PATH, "w", newline="", encoding="utf-8") as f:
 # ── Curriculum helpers ─────────────────────────────────────────────────────────
 
 def get_level(episode: int) -> int:
-    if episode < EASY_THRESHOLD:
+    if episode < LEVEL_2_START:
         return 1
-    if episode < MEDIUM_THRESHOLD:
+    if episode < LEVEL_3_START:
         return 2
-    return 3
+    if episode < LEVEL_4_START:
+        return 3
+    return 4
 
 
 # ── Translation generator ─────────────────────────────────────────────────────
@@ -173,9 +176,10 @@ def main():
     print(f"  Model          : {MODEL_NAME}")
     print(f"  Total episodes : {TOTAL_EPISODES}")
     print(f"  Curriculum     :")
-    print(f"    L1 (0-{EASY_THRESHOLD-1}):   Portuguese, 5 segments,  0.5s slack")
-    print(f"    L2 ({EASY_THRESHOLD}-{MEDIUM_THRESHOLD-1}): Portuguese, 8 segments,  0.2s slack")
-    print(f"    L3 ({MEDIUM_THRESHOLD}-{TOTAL_EPISODES-1}): Portuguese, 10 segments, 0.05s slack")
+    print(f"    L1 (0-{LEVEL_2_START-1}):     Portuguese,  5 segments, 0.5s  slack")
+    print(f"    L2 ({LEVEL_2_START}-{LEVEL_3_START-1}):   Portuguese,  8 segments, 0.3s  slack")
+    print(f"    L3 ({LEVEL_3_START}-{LEVEL_4_START-1}):   Portuguese, 10 segments, 0.15s slack")
+    print(f"    L4 ({LEVEL_4_START}-{TOTAL_EPISODES-1}):   Portuguese, 10 segments, 0.05s slack")
     print(f"  Learning rate  : {LEARNING_RATE}")
     print(f"  LoRA rank      : {LORA_RANK}")
     print("=" * 65)
