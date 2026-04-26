@@ -63,6 +63,8 @@ loss = CE × (reward − EMA baseline)
 - **Early stopping** at approximately episode 650
 - **Model:** [varun1235/isosync-qwen2.5-1.5b](https://huggingface.co/varun1235/isosync-qwen2.5-1.5b)
 
+![Reward Curves](isosync/plots/reward_curves_run3.png)
+
 ---
 
 ## Demo Pipeline
