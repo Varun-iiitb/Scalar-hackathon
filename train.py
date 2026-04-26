@@ -35,10 +35,10 @@ sys.path.insert(0, str(PROJECT_ROOT))
 #  CONFIGURATION
 # ══════════════════════════════════════════════════════════════════════════════
 MODEL_NAME          = "unsloth/Qwen2.5-1.5B-Instruct"
-TOTAL_EPISODES      = 500
-EASY_THRESHOLD      = 150    # episodes 0-149   → level 1 (Portuguese, 5 seg, 0.5s)
-MEDIUM_THRESHOLD    = 300    # episodes 150-299 → level 2 (Portuguese, 8 seg, 0.2s)
-                             # episodes 300-499 → level 3 (Portuguese, 10 seg, 0.05s)
+TOTAL_EPISODES      = 700
+EASY_THRESHOLD      = 100    # episodes 0-99    → level 1 (Portuguese, 5 seg, 0.5s)
+MEDIUM_THRESHOLD    = 250    # episodes 100-249 → level 2 (Portuguese, 8 seg, 0.2s)
+                             # episodes 250-699 → level 3 (Portuguese, 10 seg, 0.05s)
 LOG_INTERVAL        = 10
 MAX_PROMPT_LEN      = 400    # tokens — keeps each prompt well inside context
 MAX_NEW_TOKENS      = 80     # enough for one translated sentence
@@ -46,7 +46,7 @@ LORA_RANK           = 16
 LEARNING_RATE       = 1e-5
 GRAD_CLIP           = 1.0
 TEMPERATURE         = 0.7
-CHECKPOINT_EVERY    = 100
+CHECKPOINT_EVERY    = 50
 OUTPUT_DIR          = PROJECT_ROOT / "checkpoints"
 LOGS_DIR            = PROJECT_ROOT / "logs"
 HF_REPO_NAME        = "varun1235/isosync-qwen2.5-1.5b"
@@ -201,7 +201,7 @@ def main():
     # Early stopping
     best_reward      = -999.0
     patience_counter = 0
-    PATIENCE         = 100
+    PATIENCE         = 200    # increased — reward is volatile, give it room before stopping
     BEST_MODEL_DIR   = OUTPUT_DIR / "best_model"
 
     # ── Training loop ──────────────────────────────────────────────────────────

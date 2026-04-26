@@ -21,6 +21,7 @@ Reward weights:
 """
 
 import re
+import math
 from sacrebleu.metrics import CHRF
 import pyphen
 
@@ -153,19 +154,19 @@ def semantic_reward(translation: str, references: list[str]) -> float:
 def budget_reward(budget_deficit: float) -> float:
     """
     Score how well the agent manages the cumulative timing deficit.
-    Graduated thresholds calibrated to where the agent actually starts (~8-15s).
-    This gives a gradient from the beginning of training rather than zero signal.
+    Smooth exponential decay: every second of improvement raises the reward,
+    so the agent has gradient at every deficit level instead of plateaus.
+        deficit  0.0s →  reward 1.000
+        deficit  1.0s →  reward 0.607
+        deficit  2.0s →  reward 0.368
+        deficit  3.0s →  reward 0.223
+        deficit  5.0s →  reward 0.082
+        deficit 10.0s →  reward 0.007
     Returns float in [0.0, 1.0].
     """
-    if budget_deficit < 1.0:
-        return 1.0
-    if budget_deficit < 3.0:
-        return 0.5
-    if budget_deficit < 6.0:
-        return 0.2
-    if budget_deficit < 10.0:
-        return 0.05
-    return 0.0
+    if budget_deficit < 0:
+        budget_deficit = 0.0
+    return round(math.exp(-budget_deficit / 2.0), 4)
 
 
 # ── REWARD 4: Locale ─────────────────────────────────────────────────────────
