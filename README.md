@@ -138,6 +138,24 @@ baseline = 0.9 × baseline + 0.1 × mean_episode_reward
 
 Why not GRPOTrainer with a static dataset? Because IsoSync's budget mechanic means **each translation affects future rewards in the same episode** — a static dataset destroys this dependency.
 
+### How to Run Training
+
+```bash
+# 1. Clone the repo
+git clone https://huggingface.co/spaces/varun1235/dubguard-training
+cd dubguard-training
+
+# 2. Install dependencies
+pip install unsloth torch sacrebleu pyphen fastapi uvicorn pydantic
+
+# 3. Run training (700 episodes, 4-level curriculum)
+python train.py
+```
+
+Checkpoints are saved every 50 episodes to `checkpoints/`. The best model is saved to `checkpoints/best_model/` and pushed to [varun1235/isosync-qwen2.5-1.5b](https://huggingface.co/varun1235/isosync-qwen2.5-1.5b) at the end.
+
+Reward logs are written to `logs/rewards_log.csv`. Plots are generated automatically at the end of training via `plot_results.py`.
+
 ### 4-Level Curriculum
 
 | Level | Episodes | Segments | Slack | Notes |
